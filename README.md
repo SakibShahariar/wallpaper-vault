@@ -53,6 +53,13 @@ python3 ~/Scripts/assign-wallpapers.py --palette-index
 
 4. Commit and push.
 
+## Image policy
+
+- Keep originals at 1920×1080 or larger; do not downscale them.
+- Prefer JPEG or WebP and keep each file under ~5 MB where quality permits.
+- Do not commit archives, large batches of near-duplicates, or generated caches.
+- History was rebuilt from the current tree on 2026-11-23 to drop outdated image versions, so please keep new additions lean.
+
 ## Notes
 
 - Filenames were bulk-normalised on 2026-11-23. If an external script still points at an old name, update the matugen map and rebuild the caches above.
