@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wallpaper Vault — Gallery</title>
+<style>
+  :root { color-scheme: dark; --bg:#0f1115; --panel:#171a21; --text:#e8eaf0; --muted:#9aa1af; --accent:#8ab4f8; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  header { position:sticky; top:0; z-index:10; background:rgba(15,17,21,.94); backdrop-filter:blur(12px);
+            border-bottom:1px solid #262a33; padding:18px 24px 14px; }
+  h1 { margin:0 0 4px; font-size:22px; letter-spacing:.2px; }
+  .sub { color:var(--muted); font-size:13px; margin-bottom:12px; }
+  .sub a { color:var(--accent); }
+  #search { width:min(460px,100%); padding:9px 12px; border-radius:8px; border:1px solid #30353f;
+             background:var(--panel); color:var(--text); font:inherit; }
+  #search:focus { outline:2px solid var(--accent); outline-offset:1px; }
+  main { padding:8px 24px 48px; max-width:2000px; margin:0 auto; }
+  section { margin-top:34px; }
+  h2 { font-size:18px; font-weight:600; margin:0 0 14px; padding-bottom:8px; border-bottom:1px solid #262a33; }
+  h2 small { color:var(--muted); font-weight:400; font-size:12px; margin-left:6px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:18px; }
+  .card { display:block; width:100%; padding:0; text-align:left; cursor:pointer; color:var(--text);
+           background:var(--panel); border:1px solid #262a33; border-radius:12px; overflow:hidden;
+           transition:transform .15s,border-color .15s; }
+  .card:hover { transform:translateY(-3px); border-color:var(--accent); }
+  .card img { display:block; width:100%; aspect-ratio:16/9; height:auto; object-fit:cover; background:#20242c; }
+  .label { display:block; padding:10px 12px 12px; font-size:13px; color:var(--muted);
+            white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .card:hover .label { color:var(--text); }
+  .hidden { display:none !important; }
+  dialog { border:1px solid #30353f; border-radius:12px; padding:0; background:var(--panel); color:var(--text);
+            max-width:min(96vw,1600px); max-height:94vh; overflow:auto; }
+  dialog::backdrop { background:rgba(0,0,0,.82); }
+  #light-img { display:block; max-width:100%; max-height:84vh; margin:0 auto; background:#0b0d11; }
+  .light-bar { display:flex; align-items:center; gap:14px; padding:10px 14px; border-top:1px solid #262a33; }
+  .light-bar .name { flex:1; font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .light-bar a, .light-bar button { font:inherit; font-size:13px; padding:7px 12px; border-radius:7px; cursor:pointer; }
+  .light-bar a { color:#0f1115; background:var(--accent); text-decoration:none; font-weight:600; }
+  .light-bar button { color:var(--text); background:#292e38; border:1px solid #3a404c; }
+  footer { color:var(--muted); font-size:12px; padding:0 24px 32px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Wallpaper Vault</h1>
+  <div class="sub">417 wallpapers · previews are 960px WebP · click any image for the full-resolution original · <a href="../README.md">README</a></div>
+  <input id="search" type="search" placeholder="Filter by filename…" autocomplete="off" spellcheck="false">
+</header>
+<main>
+    <section id="cat-anime-and-characters">
+      <h2>Anime &amp; Characters <small>93</small></h2>
+      <div class="grid">
+      <button class="card" data-full="../alone-store-girl.jpg" data-name="alone-store-girl.jpg" type="button" aria-label="Open alone-store-girl">
+        <img src="thumbs/alone-store-girl.webp" alt="alone-store-girl" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">alone-store-girl</span>
+      </button>
+      <button class="card" data-full="../anime-girl-1.jpg" data-name="anime-girl-1.jpg" type="button" aria-label="Open anime-girl-1">
+        <img src="thumbs/anime-girl-1.webp" alt="anime-girl-1" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">anime-girl-1</span>
+      </button>
+      <button class="card" data-full="../anime-girl-2.jpg" data-name="anime-girl-2.jpg" type="button" aria-label="Open anime-girl-2">
+        <img src="thumbs/anime-girl-2.webp" alt="anime-girl-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">anime-girl-2</span>
+      </button>
+      <button class="card" data-full="../anime-girl-corgi-autumn-rooftop.jpg" data-name="anime-girl-corgi-autumn-rooftop.jpg" type="button" aria-label="Open anime-girl-corgi-autumn-rooftop">
+        <img src="thumbs/anime-girl-corgi-autumn-rooftop.webp" alt="anime-girl-corgi-autumn-rooftop" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">anime-girl-corgi-autumn-rooftop</span>
+      </button>
+      <button class="card" data-full="../anime-girl-countryside-scenery.jpg" data-name="anime-girl-countryside-scenery.jpg" type="button" aria-label="Open anime-girl-countryside-scenery">
+        <img src="thumbs/anime-girl-countryside-scenery.webp" alt="anime-girl-countryside-scenery" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">anime-girl-countryside-scenery</span>
+      </button>
+      <button class="card" data-full="../anime-swordswoman-pink-sunset-valley.jpg" data-name="anime-swordswoman-pink-sunset-valley.jpg" type="button" aria-label="Open anime-swordswoman-pink-sunset-valley">
+        <img src="thumbs/anime-swordswoman-pink-sunset-valley.webp" alt="anime-swordswoman-pink-sunset-valley" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">anime-swordswoman-pink-sunset-valley</span>
+      </button>
+      <button class="card" data-full="../anime-water.jpg" data-name="anime-water.jpg" type="button" aria-label="Open anime-water">
+        <img src="thumbs/anime-water.webp" alt="anime-water" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">anime-water</span>
+      </button>
+      <button class="card" data-full="../baby-pandas-playful-bamboo.jpg" data-name="baby-pandas-playful-bamboo.jpg" type="button" aria-label="Open baby-pandas-playful-bamboo">
+        <img src="thumbs/baby-pandas-playful-bamboo.webp" alt="baby-pandas-playful-bamboo" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">baby-pandas-playful-bamboo</span>
+      </button>
+      <button class="card" data-full="../bicycle-cat-golden-hour-bridge.jpg" data-name="bicycle-cat-golden-hour-bridge.jpg" type="button" aria-label="Open bicycle-cat-golden-hour-bridge">
+        <img src="thumbs/bicycle-cat-golden-hour-bridge.webp" alt="bicycle-cat-golden-hour-bridge" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">bicycle-cat-golden-hour-bridge</span>
+      </button>
+      <button class="card" data-full="../black-cat.jpg" data-name="black-cat.jpg" type="button" aria-label="Open black-cat">
+        <img src="thumbs/black-cat.webp" alt="black-cat" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">black-cat</span>
+      </button>
+      <button class="card" data-full="../bulbasaur.jpg" data-name="bulbasaur.jpg" type="button" aria-label="Open bulbasaur">
+        <img src="thumbs/bulbasaur.webp" alt="bulbasaur" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">bulbasaur</span>
+      </button>
+      <button class="card" data-full="../capybara-group.jpg" data-name="capybara-group.jpg" type="button" aria-label="Open capybara-group">
+        <img src="thumbs/capybara-group.webp" alt="capybara-group" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">capybara-group</span>
+      </button>
+      <button class="card" data-full="../cat-in-pond.jpg" data-name="cat-in-pond.jpg" type="button" aria-label="Open cat-in-pond">
+        <img src="thumbs/cat-in-pond.webp" alt="cat-in-pond" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cat-in-pond</span>
+      </button>
+      <button class="card" data-full="../cat-leaves.jpg" data-name="cat-leaves.jpg" type="button" aria-label="Open cat-leaves">
+        <img src="thumbs/cat-leaves.webp" alt="cat-leaves" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cat-leaves</span>
+      </button>
+      <button class="card" data-full="../cats-fishing.jpg" data-name="cats-fishing.jpg" type="button" aria-label="Open cats-fishing">
+        <img src="thumbs/cats-fishing.webp" alt="cats-fishing" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cats-fishing</span>
+      </button>
+      <button class="card" data-full="../clouds-moon-anime.jpg" data-name="clouds-moon-anime.jpg" type="button" aria-label="Open clouds-moon-anime">
+        <img src="thumbs/clouds-moon-anime.webp" alt="clouds-moon-anime" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">clouds-moon-anime</span>
+      </button>
+      <button class="card" data-full="../crimson-sun-pagoda-misty-forest.jpg" data-name="crimson-sun-pagoda-misty-forest.jpg" type="button" aria-label="Open crimson-sun-pagoda-misty-forest">
+        <img src="thumbs/crimson-sun-pagoda-misty-forest.webp" alt="crimson-sun-pagoda-misty-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">crimson-sun-pagoda-misty-forest</span>
+      </button>
+      <button class="card" data-full="../dark-purple-kimono.jpg" data-name="dark-purple-kimono.jpg" type="button" aria-label="Open dark-purple-kimono">
+        <img src="thumbs/dark-purple-kimono.webp" alt="dark-purple-kimono" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">dark-purple-kimono</span>
+      </button>
+      <button class="card" data-full="../deer-glade.jpg" data-name="deer-glade.jpg" type="button" aria-label="Open deer-glade">
+        <img src="thumbs/deer-glade.webp" alt="deer-glade" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">deer-glade</span>
+      </button>
+      <button class="card" data-full="../fox-clearing.jpg" data-name="fox-clearing.jpg" type="button" aria-label="Open fox-clearing">
+        <img src="thumbs/fox-clearing.webp" alt="fox-clearing" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">fox-clearing</span>
+      </button>
+      <button class="card" data-full="../fox-sleeping-in-bush.jpg" data-name="fox-sleeping-in-bush.jpg" type="button" aria-label="Open fox-sleeping-in-bush">
+        <img src="thumbs/fox-sleeping-in-bush.webp" alt="fox-sleeping-in-bush" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">fox-sleeping-in-bush</span>
+      </button>
+      <button class="card" data-full="../frieren-1.jpg" data-name="frieren-1.jpg" type="button" aria-label="Open frieren-1">
+        <img src="thumbs/frieren-1.webp" alt="frieren-1" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">frieren-1</span>
+      </button>
+      <button class="card" data-full="../frieren-2.jpg" data-name="frieren-2.jpg" type="button" aria-label="Open frieren-2">
+        <img src="thumbs/frieren-2.webp" alt="frieren-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">frieren-2</span>
+      </button>
+      <button class="card" data-full="../frieren-3.jpg" data-name="frieren-3.jpg" type="button" aria-label="Open frieren-3">
+        <img src="thumbs/frieren-3.webp" alt="frieren-3" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">frieren-3</span>
+      </button>
+      <button class="card" data-full="../frieren-4.jpg" data-name="frieren-4.jpg" type="button" aria-label="Open frieren-4">
+        <img src="thumbs/frieren-4.webp" alt="frieren-4" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">frieren-4</span>
+      </button>
+      <button class="card" data-full="../frieren-fire.jpg" data-name="frieren-fire.jpg" type="button" aria-label="Open frieren-fire">
+        <img src="thumbs/frieren-fire.webp" alt="frieren-fire" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">frieren-fire</span>
+      </button>
+      <button class="card" data-full="../frieren-tree.jpg" data-name="frieren-tree.jpg" type="button" aria-label="Open frieren-tree">
+        <img src="thumbs/frieren-tree.webp" alt="frieren-tree" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">frieren-tree</span>
+      </button>
+      <button class="card" data-full="../gengar-neon-pink-chaos.png" data-name="gengar-neon-pink-chaos.png" type="button" aria-label="Open gengar-neon-pink-chaos">
+        <img src="thumbs/gengar-neon-pink-chaos.webp" alt="gengar-neon-pink-chaos" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">gengar-neon-pink-chaos</span>
+      </button>
+      <button class="card" data-full="../gengar.jpg" data-name="gengar.jpg" type="button" aria-label="Open gengar">
+        <img src="thumbs/gengar.webp" alt="gengar" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">gengar</span>
+      </button>
+      <button class="card" data-full="../girl-city-night-neon.jpg" data-name="girl-city-night-neon.jpg" type="button" aria-label="Open girl-city-night-neon">
+        <img src="thumbs/girl-city-night-neon.webp" alt="girl-city-night-neon" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">girl-city-night-neon</span>
+      </button>
+      <button class="card" data-full="../girl-koi-lily-pond-anime.jpg" data-name="girl-koi-lily-pond-anime.jpg" type="button" aria-label="Open girl-koi-lily-pond-anime">
+        <img src="thumbs/girl-koi-lily-pond-anime.webp" alt="girl-koi-lily-pond-anime" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">girl-koi-lily-pond-anime</span>
+      </button>
+      <button class="card" data-full="../gojo.jpg" data-name="gojo.jpg" type="button" aria-label="Open gojo">
+        <img src="thumbs/gojo.webp" alt="gojo" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">gojo</span>
+      </button>
+      <button class="card" data-full="../goku-ultra-instinct.jpg" data-name="goku-ultra-instinct.jpg" type="button" aria-label="Open goku-ultra-instinct">
+        <img src="thumbs/goku-ultra-instinct.webp" alt="goku-ultra-instinct" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">goku-ultra-instinct</span>
+      </button>
+      <button class="card" data-full="../halloween-black-cat.jpg" data-name="halloween-black-cat.jpg" type="button" aria-label="Open halloween-black-cat">
+        <img src="thumbs/halloween-black-cat.webp" alt="halloween-black-cat" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">halloween-black-cat</span>
+      </button>
+      <button class="card" data-full="../illustration-anime-city.jpg" data-name="illustration-anime-city.jpg" type="button" aria-label="Open illustration-anime-city">
+        <img src="thumbs/illustration-anime-city.webp" alt="illustration-anime-city" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">illustration-anime-city</span>
+      </button>
+      <button class="card" data-full="../isekai.jpg" data-name="isekai.jpg" type="button" aria-label="Open isekai">
+        <img src="thumbs/isekai.webp" alt="isekai" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">isekai</span>
+      </button>
+      <button class="card" data-full="../itachi-uchiha-red-moon-night.jpg" data-name="itachi-uchiha-red-moon-night.jpg" type="button" aria-label="Open itachi-uchiha-red-moon-night">
+        <img src="thumbs/itachi-uchiha-red-moon-night.webp" alt="itachi-uchiha-red-moon-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">itachi-uchiha-red-moon-night</span>
+      </button>
+      <button class="card" data-full="../japan-alley.jpg" data-name="japan-alley.jpg" type="button" aria-label="Open japan-alley">
+        <img src="thumbs/japan-alley.webp" alt="japan-alley" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">japan-alley</span>
+      </button>
+      <button class="card" data-full="../japan-background.jpg" data-name="japan-background.jpg" type="button" aria-label="Open japan-background">
+        <img src="thumbs/japan-background.webp" alt="japan-background" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">japan-background</span>
+      </button>
+      <button class="card" data-full="../japan.jpg" data-name="japan.jpg" type="button" aria-label="Open japan">
+        <img src="thumbs/japan.webp" alt="japan" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">japan</span>
+      </button>
+      <button class="card" data-full="../japanese-cafe-green-garden-sunny-alley.jpg" data-name="japanese-cafe-green-garden-sunny-alley.jpg" type="button" aria-label="Open japanese-cafe-green-garden-sunny-alley">
+        <img src="thumbs/japanese-cafe-green-garden-sunny-alley.webp" alt="japanese-cafe-green-garden-sunny-alley" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">japanese-cafe-green-garden-sunny-alley</span>
+      </button>
+      <button class="card" data-full="../japanese-dark-night.jpg" data-name="japanese-dark-night.jpg" type="button" aria-label="Open japanese-dark-night">
+        <img src="thumbs/japanese-dark-night.webp" alt="japanese-dark-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">japanese-dark-night</span>
+      </button>
+      <button class="card" data-full="../japanese-seaside-market-street-rain.jpg" data-name="japanese-seaside-market-street-rain.jpg" type="button" aria-label="Open japanese-seaside-market-street-rain">
+        <img src="thumbs/japanese-seaside-market-street-rain.webp" alt="japanese-seaside-market-street-rain" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">japanese-seaside-market-street-rain</span>
+      </button>
+      <button class="card" data-full="../japanese-seaside-town-summer-foliage.jpg" data-name="japanese-seaside-town-summer-foliage.jpg" type="button" aria-label="Open japanese-seaside-town-summer-foliage">
+        <img src="thumbs/japanese-seaside-town-summer-foliage.webp" alt="japanese-seaside-town-summer-foliage" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">japanese-seaside-town-summer-foliage</span>
+      </button>
+      <button class="card" data-full="../joyboy.jpg" data-name="joyboy.jpg" type="button" aria-label="Open joyboy">
+        <img src="thumbs/joyboy.webp" alt="joyboy" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">joyboy</span>
+      </button>
+      <button class="card" data-full="../koishi.jpg" data-name="koishi.jpg" type="button" aria-label="Open koishi">
+        <img src="thumbs/koishi.webp" alt="koishi" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">koishi</span>
+      </button>
+      <button class="card" data-full="../lain.jpg" data-name="lain.jpg" type="button" aria-label="Open lain">
+        <img src="thumbs/lain.webp" alt="lain" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lain</span>
+      </button>
+      <button class="card" data-full="../lucy-rebecca.jpg" data-name="lucy-rebecca.jpg" type="button" aria-label="Open lucy-rebecca">
+        <img src="thumbs/lucy-rebecca.webp" alt="lucy-rebecca" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lucy-rebecca</span>
+      </button>
+      <button class="card" data-full="../luffy-from-one-piece.jpg" data-name="luffy-from-one-piece.jpg" type="button" aria-label="Open luffy-from-one-piece">
+        <img src="thumbs/luffy-from-one-piece.webp" alt="luffy-from-one-piece" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">luffy-from-one-piece</span>
+      </button>
+      <button class="card" data-full="../manga-girl-rain.jpg" data-name="manga-girl-rain.jpg" type="button" aria-label="Open manga-girl-rain">
+        <img src="thumbs/manga-girl-rain.webp" alt="manga-girl-rain" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">manga-girl-rain</span>
+      </button>
+      <button class="card" data-full="../moonlit-mountain-village.jpg" data-name="moonlit-mountain-village.jpg" type="button" aria-label="Open moonlit-mountain-village">
+        <img src="thumbs/moonlit-mountain-village.webp" alt="moonlit-mountain-village" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">moonlit-mountain-village</span>
+      </button>
+      <button class="card" data-full="../mushishi.jpg" data-name="mushishi.jpg" type="button" aria-label="Open mushishi">
+        <img src="thumbs/mushishi.webp" alt="mushishi" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">mushishi</span>
+      </button>
+      <button class="card" data-full="../nana.jpg" data-name="nana.jpg" type="button" aria-label="Open nana">
+        <img src="thumbs/nana.webp" alt="nana" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">nana</span>
+      </button>
+      <button class="card" data-full="../neon-japanese-street-pagoda-cherry-blossoms.jpg" data-name="neon-japanese-street-pagoda-cherry-blossoms.jpg" type="button" aria-label="Open neon-japanese-street-pagoda-cherry-blossoms">
+        <img src="thumbs/neon-japanese-street-pagoda-cherry-blossoms.webp" alt="neon-japanese-street-pagoda-cherry-blossoms" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">neon-japanese-street-pagoda-cherry-blossoms</span>
+      </button>
+      <button class="card" data-full="../oversized-cat.jpg" data-name="oversized-cat.jpg" type="button" aria-label="Open oversized-cat">
+        <img src="thumbs/oversized-cat.webp" alt="oversized-cat" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">oversized-cat</span>
+      </button>
+      <button class="card" data-full="../panda-branch.jpg" data-name="panda-branch.jpg" type="button" aria-label="Open panda-branch">
+        <img src="thumbs/panda-branch.webp" alt="panda-branch" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">panda-branch</span>
+      </button>
+      <button class="card" data-full="../pikachu-hot-tub.jpg" data-name="pikachu-hot-tub.jpg" type="button" aria-label="Open pikachu-hot-tub">
+        <img src="thumbs/pikachu-hot-tub.webp" alt="pikachu-hot-tub" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">pikachu-hot-tub</span>
+      </button>
+      <button class="card" data-full="../purple-sunset-pagoda-lone-samurai.jpg" data-name="purple-sunset-pagoda-lone-samurai.jpg" type="button" aria-label="Open purple-sunset-pagoda-lone-samurai">
+        <img src="thumbs/purple-sunset-pagoda-lone-samurai.webp" alt="purple-sunset-pagoda-lone-samurai" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">purple-sunset-pagoda-lone-samurai</span>
+      </button>
+      <button class="card" data-full="../raiden.jpg" data-name="raiden.jpg" type="button" aria-label="Open raiden">
+        <img src="thumbs/raiden.webp" alt="raiden" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">raiden</span>
+      </button>
+      <button class="card" data-full="../reindeer-forest.jpg" data-name="reindeer-forest.jpg" type="button" aria-label="Open reindeer-forest">
+        <img src="thumbs/reindeer-forest.webp" alt="reindeer-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">reindeer-forest</span>
+      </button>
+      <button class="card" data-full="../rengoku.jpg" data-name="rengoku.jpg" type="button" aria-label="Open rengoku">
+        <img src="thumbs/rengoku.webp" alt="rengoku" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">rengoku</span>
+      </button>
+      <button class="card" data-full="../sakura-zenitsu.jpg" data-name="sakura-zenitsu.jpg" type="button" aria-label="Open sakura-zenitsu">
+        <img src="thumbs/sakura-zenitsu.webp" alt="sakura-zenitsu" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sakura-zenitsu</span>
+      </button>
+      <button class="card" data-full="../samurai-bebop.jpg" data-name="samurai-bebop.jpg" type="button" aria-label="Open samurai-bebop">
+        <img src="thumbs/samurai-bebop.webp" alt="samurai-bebop" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">samurai-bebop</span>
+      </button>
+      <button class="card" data-full="../samurai-girl.jpg" data-name="samurai-girl.jpg" type="button" aria-label="Open samurai-girl">
+        <img src="thumbs/samurai-girl.webp" alt="samurai-girl" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">samurai-girl</span>
+      </button>
+      <button class="card" data-full="../samurai-red.jpg" data-name="samurai-red.jpg" type="button" aria-label="Open samurai-red">
+        <img src="thumbs/samurai-red.webp" alt="samurai-red" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">samurai-red</span>
+      </button>
+      <button class="card" data-full="../samurai-silhouette.jpg" data-name="samurai-silhouette.jpg" type="button" aria-label="Open samurai-silhouette">
+        <img src="thumbs/samurai-silhouette.webp" alt="samurai-silhouette" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">samurai-silhouette</span>
+      </button>
+      <button class="card" data-full="../samurai-strike.jpg" data-name="samurai-strike.jpg" type="button" aria-label="Open samurai-strike">
+        <img src="thumbs/samurai-strike.webp" alt="samurai-strike" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">samurai-strike</span>
+      </button>
+      <button class="card" data-full="../samurai.jpg" data-name="samurai.jpg" type="button" aria-label="Open samurai">
+        <img src="thumbs/samurai.webp" alt="samurai" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">samurai</span>
+      </button>
+      <button class="card" data-full="../schoolgirl-bubblegum-stairs-peach-afternoon.jpg" data-name="schoolgirl-bubblegum-stairs-peach-afternoon.jpg" type="button" aria-label="Open schoolgirl-bubblegum-stairs-peach-afternoon">
+        <img src="thumbs/schoolgirl-bubblegum-stairs-peach-afternoon.webp" alt="schoolgirl-bubblegum-stairs-peach-afternoon" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">schoolgirl-bubblegum-stairs-peach-afternoon</span>
+      </button>
+      <button class="card" data-full="../shiba-inu.jpg" data-name="shiba-inu.jpg" type="button" aria-label="Open shiba-inu">
+        <img src="thumbs/shiba-inu.webp" alt="shiba-inu" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">shiba-inu</span>
+      </button>
+      <button class="card" data-full="../shrine-gate.jpg" data-name="shrine-gate.jpg" type="button" aria-label="Open shrine-gate">
+        <img src="thumbs/shrine-gate.webp" alt="shrine-gate" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">shrine-gate</span>
+      </button>
+      <button class="card" data-full="../shrine.jpg" data-name="shrine.jpg" type="button" aria-label="Open shrine">
+        <img src="thumbs/shrine.webp" alt="shrine" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">shrine</span>
+      </button>
+      <button class="card" data-full="../sleeping-cat-in-jungle-trippy.jpg" data-name="sleeping-cat-in-jungle-trippy.jpg" type="button" aria-label="Open sleeping-cat-in-jungle-trippy">
+        <img src="thumbs/sleeping-cat-in-jungle-trippy.webp" alt="sleeping-cat-in-jungle-trippy" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sleeping-cat-in-jungle-trippy</span>
+      </button>
+      <button class="card" data-full="../squirtle.jpg" data-name="squirtle.jpg" type="button" aria-label="Open squirtle">
+        <img src="thumbs/squirtle.webp" alt="squirtle" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">squirtle</span>
+      </button>
+      <button class="card" data-full="../sukuna-fire.jpg" data-name="sukuna-fire.jpg" type="button" aria-label="Open sukuna-fire">
+        <img src="thumbs/sukuna-fire.webp" alt="sukuna-fire" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sukuna-fire</span>
+      </button>
+      <button class="card" data-full="../sunlit-torii-gate-forest-shrine.jpg" data-name="sunlit-torii-gate-forest-shrine.jpg" type="button" aria-label="Open sunlit-torii-gate-forest-shrine">
+        <img src="thumbs/sunlit-torii-gate-forest-shrine.webp" alt="sunlit-torii-gate-forest-shrine" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sunlit-torii-gate-forest-shrine</span>
+      </button>
+      <button class="card" data-full="../totoro-forest-mountain-silhouette.jpg" data-name="totoro-forest-mountain-silhouette.jpg" type="button" aria-label="Open totoro-forest-mountain-silhouette">
+        <img src="thumbs/totoro-forest-mountain-silhouette.webp" alt="totoro-forest-mountain-silhouette" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">totoro-forest-mountain-silhouette</span>
+      </button>
+      <button class="card" data-full="../totoro-my-neighbor-forest.jpg" data-name="totoro-my-neighbor-forest.jpg" type="button" aria-label="Open totoro-my-neighbor-forest">
+        <img src="thumbs/totoro-my-neighbor-forest.webp" alt="totoro-my-neighbor-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">totoro-my-neighbor-forest</span>
+      </button>
+      <button class="card" data-full="../touhou-house.jpg" data-name="touhou-house.jpg" type="button" aria-label="Open touhou-house">
+        <img src="thumbs/touhou-house.webp" alt="touhou-house" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">touhou-house</span>
+      </button>
+      <button class="card" data-full="../touhou-lake.jpg" data-name="touhou-lake.jpg" type="button" aria-label="Open touhou-lake">
+        <img src="thumbs/touhou-lake.webp" alt="touhou-lake" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">touhou-lake</span>
+      </button>
+      <button class="card" data-full="../wall-balcony-girl-peach-clouds-195.jpg" data-name="wall-balcony-girl-peach-clouds-195.jpg" type="button" aria-label="Open wall-balcony-girl-peach-clouds-195">
+        <img src="thumbs/wall-balcony-girl-peach-clouds-195.webp" alt="wall-balcony-girl-peach-clouds-195" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-balcony-girl-peach-clouds-195</span>
+      </button>
+      <button class="card" data-full="../wall-fox-resting-mountain-valley-20241213-184331.jpg" data-name="wall-fox-resting-mountain-valley-20241213-184331.jpg" type="button" aria-label="Open wall-fox-resting-mountain-valley-20241213-184331">
+        <img src="thumbs/wall-fox-resting-mountain-valley-20241213-184331.webp" alt="wall-fox-resting-mountain-valley-20241213-184331" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-fox-resting-mountain-valley-20241213-184331</span>
+      </button>
+      <button class="card" data-full="../wall-ink-samurai-lake-mountains-sepia-200.jpg" data-name="wall-ink-samurai-lake-mountains-sepia-200.jpg" type="button" aria-label="Open wall-ink-samurai-lake-mountains-sepia-200">
+        <img src="thumbs/wall-ink-samurai-lake-mountains-sepia-200.webp" alt="wall-ink-samurai-lake-mountains-sepia-200" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-ink-samurai-lake-mountains-sepia-200</span>
+      </button>
+      <button class="card" data-full="../wall-misty-blue-forest-deer-twilight-383.jpg" data-name="wall-misty-blue-forest-deer-twilight-383.jpg" type="button" aria-label="Open wall-misty-blue-forest-deer-twilight-383">
+        <img src="thumbs/wall-misty-blue-forest-deer-twilight-383.webp" alt="wall-misty-blue-forest-deer-twilight-383" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-misty-blue-forest-deer-twilight-383</span>
+      </button>
+      <button class="card" data-full="../wall-moonlit-mountain-lake-autumn-20250105-044229.jpg" data-name="wall-moonlit-mountain-lake-autumn-20250105-044229.jpg" type="button" aria-label="Open wall-moonlit-mountain-lake-autumn-20250105-044229">
+        <img src="thumbs/wall-moonlit-mountain-lake-autumn-20250105-044229.webp" alt="wall-moonlit-mountain-lake-autumn-20250105-044229" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-moonlit-mountain-lake-autumn-20250105-044229</span>
+      </button>
+      <button class="card" data-full="../wall-stretching-cat-sunny-windowsill-328.jpg" data-name="wall-stretching-cat-sunny-windowsill-328.jpg" type="button" aria-label="Open wall-stretching-cat-sunny-windowsill-328">
+        <img src="thumbs/wall-stretching-cat-sunny-windowsill-328.webp" alt="wall-stretching-cat-sunny-windowsill-328" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-stretching-cat-sunny-windowsill-328</span>
+      </button>
+      <button class="card" data-full="../wall-sunset-clouds-schoolgirl-poles-120.jpg" data-name="wall-sunset-clouds-schoolgirl-poles-120.jpg" type="button" aria-label="Open wall-sunset-clouds-schoolgirl-poles-120">
+        <img src="thumbs/wall-sunset-clouds-schoolgirl-poles-120.webp" alt="wall-sunset-clouds-schoolgirl-poles-120" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-sunset-clouds-schoolgirl-poles-120</span>
+      </button>
+      <button class="card" data-full="../wall-van-rooftop-cat-orcas-pink-378.jpg" data-name="wall-van-rooftop-cat-orcas-pink-378.jpg" type="button" aria-label="Open wall-van-rooftop-cat-orcas-pink-378">
+        <img src="thumbs/wall-van-rooftop-cat-orcas-pink-378.webp" alt="wall-van-rooftop-cat-orcas-pink-378" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-van-rooftop-cat-orcas-pink-378</span>
+      </button>
+      <button class="card" data-full="../warrior-glowing-spirit-deer-forest.jpg" data-name="warrior-glowing-spirit-deer-forest.jpg" type="button" aria-label="Open warrior-glowing-spirit-deer-forest">
+        <img src="thumbs/warrior-glowing-spirit-deer-forest.webp" alt="warrior-glowing-spirit-deer-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">warrior-glowing-spirit-deer-forest</span>
+      </button>
+      <button class="card" data-full="../whale.jpg" data-name="whale.jpg" type="button" aria-label="Open whale">
+        <img src="thumbs/whale.webp" alt="whale" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">whale</span>
+      </button>
+      <button class="card" data-full="../white-haired-bunny-girl-misty-wasteland.jpg" data-name="white-haired-bunny-girl-misty-wasteland.jpg" type="button" aria-label="Open white-haired-bunny-girl-misty-wasteland">
+        <img src="thumbs/white-haired-bunny-girl-misty-wasteland.webp" alt="white-haired-bunny-girl-misty-wasteland" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">white-haired-bunny-girl-misty-wasteland</span>
+      </button>
+      <button class="card" data-full="../white-wolf-snowy-mountain.jpg" data-name="white-wolf-snowy-mountain.jpg" type="button" aria-label="Open white-wolf-snowy-mountain">
+        <img src="thumbs/white-wolf-snowy-mountain.webp" alt="white-wolf-snowy-mountain" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">white-wolf-snowy-mountain</span>
+      </button>
+      <button class="card" data-full="../yohoho.jpg" data-name="yohoho.jpg" type="button" aria-label="Open yohoho">
+        <img src="thumbs/yohoho.webp" alt="yohoho" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">yohoho</span>
+      </button>
+      </div>
+    </section>
+    <section id="cat-games-and-sci-fi">
+      <h2>Games &amp; Sci-Fi <small>48</small></h2>
+      <div class="grid">
+      <button class="card" data-full="../apex-octane.jpg" data-name="apex-octane.jpg" type="button" aria-label="Open apex-octane">
+        <img src="thumbs/apex-octane.webp" alt="apex-octane" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">apex-octane</span>
+      </button>
+      <button class="card" data-full="../ark-knight-with-spiked-armor.jpg" data-name="ark-knight-with-spiked-armor.jpg" type="button" aria-label="Open ark-knight-with-spiked-armor">
+        <img src="thumbs/ark-knight-with-spiked-armor.webp" alt="ark-knight-with-spiked-armor" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">ark-knight-with-spiked-armor</span>
+      </button>
+      <button class="card" data-full="../astronaut-luggage-ufo-blue-starry-night.jpg" data-name="astronaut-luggage-ufo-blue-starry-night.jpg" type="button" aria-label="Open astronaut-luggage-ufo-blue-starry-night">
+        <img src="thumbs/astronaut-luggage-ufo-blue-starry-night.webp" alt="astronaut-luggage-ufo-blue-starry-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">astronaut-luggage-ufo-blue-starry-night</span>
+      </button>
+      <button class="card" data-full="../astronaut-nord.jpg" data-name="astronaut-nord.jpg" type="button" aria-label="Open astronaut-nord">
+        <img src="thumbs/astronaut-nord.webp" alt="astronaut-nord" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">astronaut-nord</span>
+      </button>
+      <button class="card" data-full="../astronaut.jpg" data-name="astronaut.jpg" type="button" aria-label="Open astronaut">
+        <img src="thumbs/astronaut.webp" alt="astronaut" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">astronaut</span>
+      </button>
+      <button class="card" data-full="../borderlands-wasteland-truck.jpg" data-name="borderlands-wasteland-truck.jpg" type="button" aria-label="Open borderlands-wasteland-truck">
+        <img src="thumbs/borderlands-wasteland-truck.webp" alt="borderlands-wasteland-truck" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">borderlands-wasteland-truck</span>
+      </button>
+      <button class="card" data-full="../colossal-titan.jpg" data-name="colossal-titan.jpg" type="button" aria-label="Open colossal-titan">
+        <img src="thumbs/colossal-titan.webp" alt="colossal-titan" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">colossal-titan</span>
+      </button>
+      <button class="card" data-full="../csm-astronaut.jpg" data-name="csm-astronaut.jpg" type="button" aria-label="Open csm-astronaut">
+        <img src="thumbs/csm-astronaut.webp" alt="csm-astronaut" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">csm-astronaut</span>
+      </button>
+      <button class="card" data-full="../cyberpunk-city-red-neon-night.jpg" data-name="cyberpunk-city-red-neon-night.jpg" type="button" aria-label="Open cyberpunk-city-red-neon-night">
+        <img src="thumbs/cyberpunk-city-red-neon-night.webp" alt="cyberpunk-city-red-neon-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cyberpunk-city-red-neon-night</span>
+      </button>
+      <button class="card" data-full="../cyberpunk-dave.jpg" data-name="cyberpunk-dave.jpg" type="button" aria-label="Open cyberpunk-dave">
+        <img src="thumbs/cyberpunk-dave.webp" alt="cyberpunk-dave" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cyberpunk-dave</span>
+      </button>
+      <button class="card" data-full="../cyberpunk-red.jpg" data-name="cyberpunk-red.jpg" type="button" aria-label="Open cyberpunk-red">
+        <img src="thumbs/cyberpunk-red.webp" alt="cyberpunk-red" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cyberpunk-red</span>
+      </button>
+      <button class="card" data-full="../cyborg-girl.jpg" data-name="cyborg-girl.jpg" type="button" aria-label="Open cyborg-girl">
+        <img src="thumbs/cyborg-girl.webp" alt="cyborg-girl" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cyborg-girl</span>
+      </button>
+      <button class="card" data-full="../dystopian-warrior-burning-city.jpg" data-name="dystopian-warrior-burning-city.jpg" type="button" aria-label="Open dystopian-warrior-burning-city">
+        <img src="thumbs/dystopian-warrior-burning-city.webp" alt="dystopian-warrior-burning-city" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">dystopian-warrior-burning-city</span>
+      </button>
+      <button class="card" data-full="../escape-velocity.jpg" data-name="escape-velocity.jpg" type="button" aria-label="Open escape-velocity">
+        <img src="thumbs/escape-velocity.webp" alt="escape-velocity" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">escape-velocity</span>
+      </button>
+      <button class="card" data-full="../firewatch.jpg" data-name="firewatch.jpg" type="button" aria-label="Open firewatch">
+        <img src="thumbs/firewatch.webp" alt="firewatch" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">firewatch</span>
+      </button>
+      <button class="card" data-full="../game-gta.jpg" data-name="game-gta.jpg" type="button" aria-label="Open game-gta">
+        <img src="thumbs/game-gta.webp" alt="game-gta" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">game-gta</span>
+      </button>
+      <button class="card" data-full="../ghost-rider.jpg" data-name="ghost-rider.jpg" type="button" aria-label="Open ghost-rider">
+        <img src="thumbs/ghost-rider.webp" alt="ghost-rider" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">ghost-rider</span>
+      </button>
+      <button class="card" data-full="../hollow-knight-white.jpg" data-name="hollow-knight-white.jpg" type="button" aria-label="Open hollow-knight-white">
+        <img src="thumbs/hollow-knight-white.webp" alt="hollow-knight-white" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">hollow-knight-white</span>
+      </button>
+      <button class="card" data-full="../kaiju.jpg" data-name="kaiju.jpg" type="button" aria-label="Open kaiju">
+        <img src="thumbs/kaiju.webp" alt="kaiju" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">kaiju</span>
+      </button>
+      <button class="card" data-full="../kratos-gow-red.jpg" data-name="kratos-gow-red.jpg" type="button" aria-label="Open kratos-gow-red">
+        <img src="thumbs/kratos-gow-red.webp" alt="kratos-gow-red" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">kratos-gow-red</span>
+      </button>
+      <button class="card" data-full="../mad-max-fury-road.jpg" data-name="mad-max-fury-road.jpg" type="button" aria-label="Open mad-max-fury-road">
+        <img src="thumbs/mad-max-fury-road.webp" alt="mad-max-fury-road" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">mad-max-fury-road</span>
+      </button>
+      <button class="card" data-full="../monsters-moon-night.jpg" data-name="monsters-moon-night.jpg" type="button" aria-label="Open monsters-moon-night">
+        <img src="thumbs/monsters-moon-night.webp" alt="monsters-moon-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">monsters-moon-night</span>
+      </button>
+      <button class="card" data-full="../oxocarbon-evangelion.jpg" data-name="oxocarbon-evangelion.jpg" type="button" aria-label="Open oxocarbon-evangelion">
+        <img src="thumbs/oxocarbon-evangelion.webp" alt="oxocarbon-evangelion" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">oxocarbon-evangelion</span>
+      </button>
+      <button class="card" data-full="../red-dead.jpg" data-name="red-dead.jpg" type="button" aria-label="Open red-dead">
+        <img src="thumbs/red-dead.webp" alt="red-dead" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">red-dead</span>
+      </button>
+      <button class="card" data-full="../samurai-cyber.jpg" data-name="samurai-cyber.jpg" type="button" aria-label="Open samurai-cyber">
+        <img src="thumbs/samurai-cyber.webp" alt="samurai-cyber" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">samurai-cyber</span>
+      </button>
+      <button class="card" data-full="../sans-wine.jpg" data-name="sans-wine.jpg" type="button" aria-label="Open sans-wine">
+        <img src="thumbs/sans-wine.webp" alt="sans-wine" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sans-wine</span>
+      </button>
+      <button class="card" data-full="../sekiro.jpg" data-name="sekiro.jpg" type="button" aria-label="Open sekiro">
+        <img src="thumbs/sekiro.webp" alt="sekiro" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sekiro</span>
+      </button>
+      <button class="card" data-full="../space-nebula.jpg" data-name="space-nebula.jpg" type="button" aria-label="Open space-nebula">
+        <img src="thumbs/space-nebula.webp" alt="space-nebula" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">space-nebula</span>
+      </button>
+      <button class="card" data-full="../spaceship.jpg" data-name="spaceship.jpg" type="button" aria-label="Open spaceship">
+        <img src="thumbs/spaceship.webp" alt="spaceship" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">spaceship</span>
+      </button>
+      <button class="card" data-full="../star-wars.jpg" data-name="star-wars.jpg" type="button" aria-label="Open star-wars">
+        <img src="thumbs/star-wars.webp" alt="star-wars" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">star-wars</span>
+      </button>
+      <button class="card" data-full="../ultrakill-red.jpg" data-name="ultrakill-red.jpg" type="button" aria-label="Open ultrakill-red">
+        <img src="thumbs/ultrakill-red.webp" alt="ultrakill-red" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">ultrakill-red</span>
+      </button>
+      <button class="card" data-full="../valorant.jpg" data-name="valorant.jpg" type="button" aria-label="Open valorant">
+        <img src="thumbs/valorant.webp" alt="valorant" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">valorant</span>
+      </button>
+      <button class="card" data-full="../voyager-ancient-columns-forest-sunlight-22.jpg" data-name="voyager-ancient-columns-forest-sunlight-22.jpg" type="button" aria-label="Open voyager-ancient-columns-forest-sunlight-22">
+        <img src="thumbs/voyager-ancient-columns-forest-sunlight-22.webp" alt="voyager-ancient-columns-forest-sunlight-22" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">voyager-ancient-columns-forest-sunlight-22</span>
+      </button>
+      <button class="card" data-full="../voyager-attic-writing-autumn-rooftops-11.jpg" data-name="voyager-attic-writing-autumn-rooftops-11.jpg" type="button" aria-label="Open voyager-attic-writing-autumn-rooftops-11">
+        <img src="thumbs/voyager-attic-writing-autumn-rooftops-11.webp" alt="voyager-attic-writing-autumn-rooftops-11" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">voyager-attic-writing-autumn-rooftops-11</span>
+      </button>
+      <button class="card" data-full="../voyager-cherry-blossom-waterfall-14.jpg" data-name="voyager-cherry-blossom-waterfall-14.jpg" type="button" aria-label="Open voyager-cherry-blossom-waterfall-14">
+        <img src="thumbs/voyager-cherry-blossom-waterfall-14.webp" alt="voyager-cherry-blossom-waterfall-14" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">voyager-cherry-blossom-waterfall-14</span>
+      </button>
+      <button class="card" data-full="../voyager-floating-figure-mossy-sea-9.jpg" data-name="voyager-floating-figure-mossy-sea-9.jpg" type="button" aria-label="Open voyager-floating-figure-mossy-sea-9">
+        <img src="thumbs/voyager-floating-figure-mossy-sea-9.webp" alt="voyager-floating-figure-mossy-sea-9" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">voyager-floating-figure-mossy-sea-9</span>
+      </button>
+      <button class="card" data-full="../voyager-fuji-river-village-autumn-15.jpg" data-name="voyager-fuji-river-village-autumn-15.jpg" type="button" aria-label="Open voyager-fuji-river-village-autumn-15">
+        <img src="thumbs/voyager-fuji-river-village-autumn-15.webp" alt="voyager-fuji-river-village-autumn-15" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">voyager-fuji-river-village-autumn-15</span>
+      </button>
+      <button class="card" data-full="../voyager-glowing-cube-forest-7.jpg" data-name="voyager-glowing-cube-forest-7.jpg" type="button" aria-label="Open voyager-glowing-cube-forest-7">
+        <img src="thumbs/voyager-glowing-cube-forest-7.webp" alt="voyager-glowing-cube-forest-7" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">voyager-glowing-cube-forest-7</span>
+      </button>
+      <button class="card" data-full="../voyager-golden-spire-autumn-forest-20.jpg" data-name="voyager-golden-spire-autumn-forest-20.jpg" type="button" aria-label="Open voyager-golden-spire-autumn-forest-20">
+        <img src="thumbs/voyager-golden-spire-autumn-forest-20.webp" alt="voyager-golden-spire-autumn-forest-20" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">voyager-golden-spire-autumn-forest-20</span>
+      </button>
+      <button class="card" data-full="../voyager-green-forest-waterfall-sunlit-4.jpg" data-name="voyager-green-forest-waterfall-sunlit-4.jpg" type="button" aria-label="Open voyager-green-forest-waterfall-sunlit-4">
+        <img src="thumbs/voyager-green-forest-waterfall-sunlit-4.webp" alt="voyager-green-forest-waterfall-sunlit-4" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">voyager-green-forest-waterfall-sunlit-4</span>
+      </button>
+      <button class="card" data-full="../voyager-pastel-windmills-sunset-12.jpg" data-name="voyager-pastel-windmills-sunset-12.jpg" type="button" aria-label="Open voyager-pastel-windmills-sunset-12">
+        <img src="thumbs/voyager-pastel-windmills-sunset-12.webp" alt="voyager-pastel-windmills-sunset-12" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">voyager-pastel-windmills-sunset-12</span>
+      </button>
+      <button class="card" data-full="../voyager-rice-terraces-traveler-16.jpg" data-name="voyager-rice-terraces-traveler-16.jpg" type="button" aria-label="Open voyager-rice-terraces-traveler-16">
+        <img src="thumbs/voyager-rice-terraces-traveler-16.webp" alt="voyager-rice-terraces-traveler-16" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">voyager-rice-terraces-traveler-16</span>
+      </button>
+      <button class="card" data-full="../voyager-sunlit-canopy-tree-13.jpg" data-name="voyager-sunlit-canopy-tree-13.jpg" type="button" aria-label="Open voyager-sunlit-canopy-tree-13">
+        <img src="thumbs/voyager-sunlit-canopy-tree-13.webp" alt="voyager-sunlit-canopy-tree-13" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">voyager-sunlit-canopy-tree-13</span>
+      </button>
+      <button class="card" data-full="../wall-astronaut-alien-planet-orange-20250604-123317.jpg" data-name="wall-astronaut-alien-planet-orange-20250604-123317.jpg" type="button" aria-label="Open wall-astronaut-alien-planet-orange-20250604-123317">
+        <img src="thumbs/wall-astronaut-alien-planet-orange-20250604-123317.webp" alt="wall-astronaut-alien-planet-orange-20250604-123317" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-astronaut-alien-planet-orange-20250604-123317</span>
+      </button>
+      <button class="card" data-full="../wall-astronaut-red-stripe-dark-20250415-182509.jpg" data-name="wall-astronaut-red-stripe-dark-20250415-182509.jpg" type="button" aria-label="Open wall-astronaut-red-stripe-dark-20250415-182509">
+        <img src="thumbs/wall-astronaut-red-stripe-dark-20250415-182509.webp" alt="wall-astronaut-red-stripe-dark-20250415-182509" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-astronaut-red-stripe-dark-20250415-182509</span>
+      </button>
+      <button class="card" data-full="../wall-auburn-girl-mechanical-headset-20251129-102359.jpg" data-name="wall-auburn-girl-mechanical-headset-20251129-102359.jpg" type="button" aria-label="Open wall-auburn-girl-mechanical-headset-20251129-102359">
+        <img src="thumbs/wall-auburn-girl-mechanical-headset-20251129-102359.webp" alt="wall-auburn-girl-mechanical-headset-20251129-102359" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-auburn-girl-mechanical-headset-20251129-102359</span>
+      </button>
+      <button class="card" data-full="../wall-cyborg-face-gears-monochrome-20250101-191201.jpg" data-name="wall-cyborg-face-gears-monochrome-20250101-191201.jpg" type="button" aria-label="Open wall-cyborg-face-gears-monochrome-20250101-191201">
+        <img src="thumbs/wall-cyborg-face-gears-monochrome-20250101-191201.webp" alt="wall-cyborg-face-gears-monochrome-20250101-191201" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-cyborg-face-gears-monochrome-20250101-191201</span>
+      </button>
+      <button class="card" data-full="../wall-retro-space-planets-rocket-451.jpg" data-name="wall-retro-space-planets-rocket-451.jpg" type="button" aria-label="Open wall-retro-space-planets-rocket-451">
+        <img src="thumbs/wall-retro-space-planets-rocket-451.webp" alt="wall-retro-space-planets-rocket-451" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-retro-space-planets-rocket-451</span>
+      </button>
+      </div>
+    </section>
+    <section id="cat-nature-and-landscapes">
+      <h2>Nature &amp; Landscapes <small>109</small></h2>
+      <div class="grid">
+      <button class="card" data-full="../abandoned-boat-red-sunset-marsh.jpg" data-name="abandoned-boat-red-sunset-marsh.jpg" type="button" aria-label="Open abandoned-boat-red-sunset-marsh">
+        <img src="thumbs/abandoned-boat-red-sunset-marsh.webp" alt="abandoned-boat-red-sunset-marsh" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">abandoned-boat-red-sunset-marsh</span>
+      </button>
+      <button class="card" data-full="../aurora-borealis.jpg" data-name="aurora-borealis.jpg" type="button" aria-label="Open aurora-borealis">
+        <img src="thumbs/aurora-borealis.webp" alt="aurora-borealis" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">aurora-borealis</span>
+      </button>
+      <button class="card" data-full="../autumn-leaves-fall-pattern.jpg" data-name="autumn-leaves-fall-pattern.jpg" type="button" aria-label="Open autumn-leaves-fall-pattern">
+        <img src="thumbs/autumn-leaves-fall-pattern.webp" alt="autumn-leaves-fall-pattern" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">autumn-leaves-fall-pattern</span>
+      </button>
+      <button class="card" data-full="../autumn-woodlands.jpg" data-name="autumn-woodlands.jpg" type="button" aria-label="Open autumn-woodlands">
+        <img src="thumbs/autumn-woodlands.webp" alt="autumn-woodlands" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">autumn-woodlands</span>
+      </button>
+      <button class="card" data-full="../beach-path.jpg" data-name="beach-path.jpg" type="button" aria-label="Open beach-path">
+        <img src="thumbs/beach-path.webp" alt="beach-path" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">beach-path</span>
+      </button>
+      <button class="card" data-full="../bluish-sky.jpg" data-name="bluish-sky.jpg" type="button" aria-label="Open bluish-sky">
+        <img src="thumbs/bluish-sky.webp" alt="bluish-sky" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">bluish-sky</span>
+      </button>
+      <button class="card" data-full="../burning-forest-fire-orange-flames-silhouette.jpg" data-name="burning-forest-fire-orange-flames-silhouette.jpg" type="button" aria-label="Open burning-forest-fire-orange-flames-silhouette">
+        <img src="thumbs/burning-forest-fire-orange-flames-silhouette.webp" alt="burning-forest-fire-orange-flames-silhouette" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">burning-forest-fire-orange-flames-silhouette</span>
+      </button>
+      <button class="card" data-full="../cherry-blossom.jpg" data-name="cherry-blossom.jpg" type="button" aria-label="Open cherry-blossom">
+        <img src="thumbs/cherry-blossom.webp" alt="cherry-blossom" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cherry-blossom</span>
+      </button>
+      <button class="card" data-full="../cliff-edge.jpg" data-name="cliff-edge.jpg" type="button" aria-label="Open cliff-edge">
+        <img src="thumbs/cliff-edge.webp" alt="cliff-edge" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cliff-edge</span>
+      </button>
+      <button class="card" data-full="../cliff-path.jpg" data-name="cliff-path.jpg" type="button" aria-label="Open cliff-path">
+        <img src="thumbs/cliff-path.webp" alt="cliff-path" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cliff-path</span>
+      </button>
+      <button class="card" data-full="../clouds-2.jpg" data-name="clouds-2.jpg" type="button" aria-label="Open clouds-2">
+        <img src="thumbs/clouds-2.webp" alt="clouds-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">clouds-2</span>
+      </button>
+      <button class="card" data-full="../clouds-and-mountains-scenery.jpg" data-name="clouds-and-mountains-scenery.jpg" type="button" aria-label="Open clouds-and-mountains-scenery">
+        <img src="thumbs/clouds-and-mountains-scenery.webp" alt="clouds-and-mountains-scenery" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">clouds-and-mountains-scenery</span>
+      </button>
+      <button class="card" data-full="../courtside-sunset.jpg" data-name="courtside-sunset.jpg" type="button" aria-label="Open courtside-sunset">
+        <img src="thumbs/courtside-sunset.webp" alt="courtside-sunset" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">courtside-sunset</span>
+      </button>
+      <button class="card" data-full="../dark-forest.jpg" data-name="dark-forest.jpg" type="button" aria-label="Open dark-forest">
+        <img src="thumbs/dark-forest.webp" alt="dark-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">dark-forest</span>
+      </button>
+      <button class="card" data-full="../desert-highway-wagon-red-rocks-sunset.jpg" data-name="desert-highway-wagon-red-rocks-sunset.jpg" type="button" aria-label="Open desert-highway-wagon-red-rocks-sunset">
+        <img src="thumbs/desert-highway-wagon-red-rocks-sunset.webp" alt="desert-highway-wagon-red-rocks-sunset" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">desert-highway-wagon-red-rocks-sunset</span>
+      </button>
+      <button class="card" data-full="../dimming-lights-night.jpg" data-name="dimming-lights-night.jpg" type="button" aria-label="Open dimming-lights-night">
+        <img src="thumbs/dimming-lights-night.webp" alt="dimming-lights-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">dimming-lights-night</span>
+      </button>
+      <button class="card" data-full="../divine-tree.jpg" data-name="divine-tree.jpg" type="button" aria-label="Open divine-tree">
+        <img src="thumbs/divine-tree.webp" alt="divine-tree" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">divine-tree</span>
+      </button>
+      <button class="card" data-full="../droplets.jpg" data-name="droplets.jpg" type="button" aria-label="Open droplets">
+        <img src="thumbs/droplets.webp" alt="droplets" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">droplets</span>
+      </button>
+      <button class="card" data-full="../fantasy-forest.jpg" data-name="fantasy-forest.jpg" type="button" aria-label="Open fantasy-forest">
+        <img src="thumbs/fantasy-forest.webp" alt="fantasy-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">fantasy-forest</span>
+      </button>
+      <button class="card" data-full="../fantasy-lake-3.jpg" data-name="fantasy-lake-3.jpg" type="button" aria-label="Open fantasy-lake-3">
+        <img src="thumbs/fantasy-lake-3.webp" alt="fantasy-lake-3" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">fantasy-lake-3</span>
+      </button>
+      <button class="card" data-full="../flower-garden.jpg" data-name="flower-garden.jpg" type="button" aria-label="Open flower-garden">
+        <img src="thumbs/flower-garden.webp" alt="flower-garden" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">flower-garden</span>
+      </button>
+      <button class="card" data-full="../flowering-rain.jpg" data-name="flowering-rain.jpg" type="button" aria-label="Open flowering-rain">
+        <img src="thumbs/flowering-rain.webp" alt="flowering-rain" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">flowering-rain</span>
+      </button>
+      <button class="card" data-full="../forest-old-man-trees.jpg" data-name="forest-old-man-trees.jpg" type="button" aria-label="Open forest-old-man-trees">
+        <img src="thumbs/forest-old-man-trees.webp" alt="forest-old-man-trees" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">forest-old-man-trees</span>
+      </button>
+      <button class="card" data-full="../forest.jpg" data-name="forest.jpg" type="button" aria-label="Open forest">
+        <img src="thumbs/forest.webp" alt="forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">forest</span>
+      </button>
+      <button class="card" data-full="../galaxy-gruvbox.jpg" data-name="galaxy-gruvbox.jpg" type="button" aria-label="Open galaxy-gruvbox">
+        <img src="thumbs/galaxy-gruvbox.webp" alt="galaxy-gruvbox" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">galaxy-gruvbox</span>
+      </button>
+      <button class="card" data-full="../galaxy.jpg" data-name="galaxy.jpg" type="button" aria-label="Open galaxy">
+        <img src="thumbs/galaxy.webp" alt="galaxy" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">galaxy</span>
+      </button>
+      <button class="card" data-full="../green-forest.jpg" data-name="green-forest.jpg" type="button" aria-label="Open green-forest">
+        <img src="thumbs/green-forest.webp" alt="green-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">green-forest</span>
+      </button>
+      <button class="card" data-full="../hanged-man-tree.jpg" data-name="hanged-man-tree.jpg" type="button" aria-label="Open hanged-man-tree">
+        <img src="thumbs/hanged-man-tree.webp" alt="hanged-man-tree" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">hanged-man-tree</span>
+      </button>
+      <button class="card" data-full="../hills.jpg" data-name="hills.jpg" type="button" aria-label="Open hills">
+        <img src="thumbs/hills.webp" alt="hills" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">hills</span>
+      </button>
+      <button class="card" data-full="../home-under-moonlight.jpg" data-name="home-under-moonlight.jpg" type="button" aria-label="Open home-under-moonlight">
+        <img src="thumbs/home-under-moonlight.webp" alt="home-under-moonlight" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">home-under-moonlight</span>
+      </button>
+      <button class="card" data-full="../house-horse-trees.jpg" data-name="house-horse-trees.jpg" type="button" aria-label="Open house-horse-trees">
+        <img src="thumbs/house-horse-trees.webp" alt="house-horse-trees" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">house-horse-trees</span>
+      </button>
+      <button class="card" data-full="../house-sunset-sky-clouds.jpg" data-name="house-sunset-sky-clouds.jpg" type="button" aria-label="Open house-sunset-sky-clouds">
+        <img src="thumbs/house-sunset-sky-clouds.webp" alt="house-sunset-sky-clouds" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">house-sunset-sky-clouds</span>
+      </button>
+      <button class="card" data-full="../house-trees-flowers.jpg" data-name="house-trees-flowers.jpg" type="button" aria-label="Open house-trees-flowers">
+        <img src="thumbs/house-trees-flowers.webp" alt="house-trees-flowers" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">house-trees-flowers</span>
+      </button>
+      <button class="card" data-full="../house-trees-lake-mountains.jpg" data-name="house-trees-lake-mountains.jpg" type="button" aria-label="Open house-trees-lake-mountains">
+        <img src="thumbs/house-trees-lake-mountains.webp" alt="house-trees-lake-mountains" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">house-trees-lake-mountains</span>
+      </button>
+      <button class="card" data-full="../leaves-3.jpg" data-name="leaves-3.jpg" type="button" aria-label="Open leaves-3">
+        <img src="thumbs/leaves-3.webp" alt="leaves-3" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">leaves-3</span>
+      </button>
+      <button class="card" data-full="../leaves-4.jpg" data-name="leaves-4.jpg" type="button" aria-label="Open leaves-4">
+        <img src="thumbs/leaves-4.webp" alt="leaves-4" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">leaves-4</span>
+      </button>
+      <button class="card" data-full="../leaves.jpg" data-name="leaves.jpg" type="button" aria-label="Open leaves">
+        <img src="thumbs/leaves.webp" alt="leaves" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">leaves</span>
+      </button>
+      <button class="card" data-full="../lighthouse-pink-clouds.jpg" data-name="lighthouse-pink-clouds.jpg" type="button" aria-label="Open lighthouse-pink-clouds">
+        <img src="thumbs/lighthouse-pink-clouds.webp" alt="lighthouse-pink-clouds" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lighthouse-pink-clouds</span>
+      </button>
+      <button class="card" data-full="../lovely-summer.jpg" data-name="lovely-summer.jpg" type="button" aria-label="Open lovely-summer">
+        <img src="thumbs/lovely-summer.webp" alt="lovely-summer" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lovely-summer</span>
+      </button>
+      <button class="card" data-full="../lovers-looking-at-sky.jpg" data-name="lovers-looking-at-sky.jpg" type="button" aria-label="Open lovers-looking-at-sky">
+        <img src="thumbs/lovers-looking-at-sky.webp" alt="lovers-looking-at-sky" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lovers-looking-at-sky</span>
+      </button>
+      <button class="card" data-full="../marine-tunnel.jpg" data-name="marine-tunnel.jpg" type="button" aria-label="Open marine-tunnel">
+        <img src="thumbs/marine-tunnel.webp" alt="marine-tunnel" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">marine-tunnel</span>
+      </button>
+      <button class="card" data-full="../minimalist-blue-mountain-forest-birds.jpg" data-name="minimalist-blue-mountain-forest-birds.jpg" type="button" aria-label="Open minimalist-blue-mountain-forest-birds">
+        <img src="thumbs/minimalist-blue-mountain-forest-birds.webp" alt="minimalist-blue-mountain-forest-birds" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">minimalist-blue-mountain-forest-birds</span>
+      </button>
+      <button class="card" data-full="../misty-boat.jpg" data-name="misty-boat.jpg" type="button" aria-label="Open misty-boat">
+        <img src="thumbs/misty-boat.webp" alt="misty-boat" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">misty-boat</span>
+      </button>
+      <button class="card" data-full="../misty-forest.jpg" data-name="misty-forest.jpg" type="button" aria-label="Open misty-forest">
+        <img src="thumbs/misty-forest.webp" alt="misty-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">misty-forest</span>
+      </button>
+      <button class="card" data-full="../monokai-night.jpg" data-name="monokai-night.jpg" type="button" aria-label="Open monokai-night">
+        <img src="thumbs/monokai-night.webp" alt="monokai-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">monokai-night</span>
+      </button>
+      <button class="card" data-full="../moon-beach.jpg" data-name="moon-beach.jpg" type="button" aria-label="Open moon-beach">
+        <img src="thumbs/moon-beach.webp" alt="moon-beach" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">moon-beach</span>
+      </button>
+      <button class="card" data-full="../moon-night.jpg" data-name="moon-night.jpg" type="button" aria-label="Open moon-night">
+        <img src="thumbs/moon-night.webp" alt="moon-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">moon-night</span>
+      </button>
+      <button class="card" data-full="../mountain-rain-darkness.jpg" data-name="mountain-rain-darkness.jpg" type="button" aria-label="Open mountain-rain-darkness">
+        <img src="thumbs/mountain-rain-darkness.webp" alt="mountain-rain-darkness" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">mountain-rain-darkness</span>
+      </button>
+      <button class="card" data-full="../mountains-trees-caravan.jpg" data-name="mountains-trees-caravan.jpg" type="button" aria-label="Open mountains-trees-caravan">
+        <img src="thumbs/mountains-trees-caravan.webp" alt="mountains-trees-caravan" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">mountains-trees-caravan</span>
+      </button>
+      <button class="card" data-full="../night-journey-home.jpg" data-name="night-journey-home.jpg" type="button" aria-label="Open night-journey-home">
+        <img src="thumbs/night-journey-home.webp" alt="night-journey-home" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">night-journey-home</span>
+      </button>
+      <button class="card" data-full="../night-moon.jpg" data-name="night-moon.jpg" type="button" aria-label="Open night-moon">
+        <img src="thumbs/night-moon.webp" alt="night-moon" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">night-moon</span>
+      </button>
+      <button class="card" data-full="../nightfall-by-the-lake.jpg" data-name="nightfall-by-the-lake.jpg" type="button" aria-label="Open nightfall-by-the-lake">
+        <img src="thumbs/nightfall-by-the-lake.webp" alt="nightfall-by-the-lake" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">nightfall-by-the-lake</span>
+      </button>
+      <button class="card" data-full="../orange-desert.jpg" data-name="orange-desert.jpg" type="button" aria-label="Open orange-desert">
+        <img src="thumbs/orange-desert.webp" alt="orange-desert" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">orange-desert</span>
+      </button>
+      <button class="card" data-full="../orange-van-mountain-meadow-sunshine.jpg" data-name="orange-van-mountain-meadow-sunshine.jpg" type="button" aria-label="Open orange-van-mountain-meadow-sunshine">
+        <img src="thumbs/orange-van-mountain-meadow-sunshine.webp" alt="orange-van-mountain-meadow-sunshine" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">orange-van-mountain-meadow-sunshine</span>
+      </button>
+      <button class="card" data-full="../overgrown-red-telephone-booth-forest.jpg" data-name="overgrown-red-telephone-booth-forest.jpg" type="button" aria-label="Open overgrown-red-telephone-booth-forest">
+        <img src="thumbs/overgrown-red-telephone-booth-forest.webp" alt="overgrown-red-telephone-booth-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">overgrown-red-telephone-booth-forest</span>
+      </button>
+      <button class="card" data-full="../painting-cave-bridges-water.jpg" data-name="painting-cave-bridges-water.jpg" type="button" aria-label="Open painting-cave-bridges-water">
+        <img src="thumbs/painting-cave-bridges-water.webp" alt="painting-cave-bridges-water" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">painting-cave-bridges-water</span>
+      </button>
+      <button class="card" data-full="../painting-forest-water-sky.jpg" data-name="painting-forest-water-sky.jpg" type="button" aria-label="Open painting-forest-water-sky">
+        <img src="thumbs/painting-forest-water-sky.webp" alt="painting-forest-water-sky" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">painting-forest-water-sky</span>
+      </button>
+      <button class="card" data-full="../palms-purple-sky.jpg" data-name="palms-purple-sky.jpg" type="button" aria-label="Open palms-purple-sky">
+        <img src="thumbs/palms-purple-sky.webp" alt="palms-purple-sky" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">palms-purple-sky</span>
+      </button>
+      <button class="card" data-full="../pixel-orange-sunset-clouds-city.jpg" data-name="pixel-orange-sunset-clouds-city.jpg" type="button" aria-label="Open pixel-orange-sunset-clouds-city">
+        <img src="thumbs/pixel-orange-sunset-clouds-city.webp" alt="pixel-orange-sunset-clouds-city" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">pixel-orange-sunset-clouds-city</span>
+      </button>
+      <button class="card" data-full="../purple-night.jpg" data-name="purple-night.jpg" type="button" aria-label="Open purple-night">
+        <img src="thumbs/purple-night.webp" alt="purple-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">purple-night</span>
+      </button>
+      <button class="card" data-full="../quiet-night-secluded-home.jpg" data-name="quiet-night-secluded-home.jpg" type="button" aria-label="Open quiet-night-secluded-home">
+        <img src="thumbs/quiet-night-secluded-home.webp" alt="quiet-night-secluded-home" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">quiet-night-secluded-home</span>
+      </button>
+      <button class="card" data-full="../radio-tower-orange-sunset-clouds.jpg" data-name="radio-tower-orange-sunset-clouds.jpg" type="button" aria-label="Open radio-tower-orange-sunset-clouds">
+        <img src="thumbs/radio-tower-orange-sunset-clouds.webp" alt="radio-tower-orange-sunset-clouds" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">radio-tower-orange-sunset-clouds</span>
+      </button>
+      <button class="card" data-full="../rain-dark-1.jpg" data-name="rain-dark-1.jpg" type="button" aria-label="Open rain-dark-1">
+        <img src="thumbs/rain-dark-1.webp" alt="rain-dark-1" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">rain-dark-1</span>
+      </button>
+      <button class="card" data-full="../rain-dark-2.jpg" data-name="rain-dark-2.jpg" type="button" aria-label="Open rain-dark-2">
+        <img src="thumbs/rain-dark-2.webp" alt="rain-dark-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">rain-dark-2</span>
+      </button>
+      <button class="card" data-full="../rain-group.jpg" data-name="rain-group.jpg" type="button" aria-label="Open rain-group">
+        <img src="thumbs/rain-group.webp" alt="rain-group" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">rain-group</span>
+      </button>
+      <button class="card" data-full="../rain-world-1.jpg" data-name="rain-world-1.jpg" type="button" aria-label="Open rain-world-1">
+        <img src="thumbs/rain-world-1.webp" alt="rain-world-1" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">rain-world-1</span>
+      </button>
+      <button class="card" data-full="../rain-world.jpg" data-name="rain-world.jpg" type="button" aria-label="Open rain-world">
+        <img src="thumbs/rain-world.webp" alt="rain-world" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">rain-world</span>
+      </button>
+      <button class="card" data-full="../river-gorge.jpg" data-name="river-gorge.jpg" type="button" aria-label="Open river-gorge">
+        <img src="thumbs/river-gorge.webp" alt="river-gorge" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">river-gorge</span>
+      </button>
+      <button class="card" data-full="../rocks-trees-flowers-butterfly.jpg" data-name="rocks-trees-flowers-butterfly.jpg" type="button" aria-label="Open rocks-trees-flowers-butterfly">
+        <img src="thumbs/rocks-trees-flowers-butterfly.webp" alt="rocks-trees-flowers-butterfly" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">rocks-trees-flowers-butterfly</span>
+      </button>
+      <button class="card" data-full="../ruined-archway-forest.jpg" data-name="ruined-archway-forest.jpg" type="button" aria-label="Open ruined-archway-forest">
+        <img src="thumbs/ruined-archway-forest.webp" alt="ruined-archway-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">ruined-archway-forest</span>
+      </button>
+      <button class="card" data-full="../sea-rocks.jpg" data-name="sea-rocks.jpg" type="button" aria-label="Open sea-rocks">
+        <img src="thumbs/sea-rocks.webp" alt="sea-rocks" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sea-rocks</span>
+      </button>
+      <button class="card" data-full="../sea-shore.jpg" data-name="sea-shore.jpg" type="button" aria-label="Open sea-shore">
+        <img src="thumbs/sea-shore.webp" alt="sea-shore" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sea-shore</span>
+      </button>
+      <button class="card" data-full="../secluded-valley-hidden-world.jpg" data-name="secluded-valley-hidden-world.jpg" type="button" aria-label="Open secluded-valley-hidden-world">
+        <img src="thumbs/secluded-valley-hidden-world.webp" alt="secluded-valley-hidden-world" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">secluded-valley-hidden-world</span>
+      </button>
+      <button class="card" data-full="../silent-hill-foggy-parking-lot.jpg" data-name="silent-hill-foggy-parking-lot.jpg" type="button" aria-label="Open silent-hill-foggy-parking-lot">
+        <img src="thumbs/silent-hill-foggy-parking-lot.webp" alt="silent-hill-foggy-parking-lot" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">silent-hill-foggy-parking-lot</span>
+      </button>
+      <button class="card" data-full="../sky-dark-blue.jpg" data-name="sky-dark-blue.jpg" type="button" aria-label="Open sky-dark-blue">
+        <img src="thumbs/sky-dark-blue.webp" alt="sky-dark-blue" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sky-dark-blue</span>
+      </button>
+      <button class="card" data-full="../sky-night.jpg" data-name="sky-night.jpg" type="button" aria-label="Open sky-night">
+        <img src="thumbs/sky-night.webp" alt="sky-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sky-night</span>
+      </button>
+      <button class="card" data-full="../snowflakes.jpg" data-name="snowflakes.jpg" type="button" aria-label="Open snowflakes">
+        <img src="thumbs/snowflakes.webp" alt="snowflakes" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">snowflakes</span>
+      </button>
+      <button class="card" data-full="../summer-city-at-sunset.jpg" data-name="summer-city-at-sunset.jpg" type="button" aria-label="Open summer-city-at-sunset">
+        <img src="thumbs/summer-city-at-sunset.webp" alt="summer-city-at-sunset" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">summer-city-at-sunset</span>
+      </button>
+      <button class="card" data-full="../sunrise.jpg" data-name="sunrise.jpg" type="button" aria-label="Open sunrise">
+        <img src="thumbs/sunrise.webp" alt="sunrise" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sunrise</span>
+      </button>
+      <button class="card" data-full="../sunset-drive-forest.jpg" data-name="sunset-drive-forest.jpg" type="button" aria-label="Open sunset-drive-forest">
+        <img src="thumbs/sunset-drive-forest.webp" alt="sunset-drive-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sunset-drive-forest</span>
+      </button>
+      <button class="card" data-full="../sunset-forest.jpg" data-name="sunset-forest.jpg" type="button" aria-label="Open sunset-forest">
+        <img src="thumbs/sunset-forest.webp" alt="sunset-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sunset-forest</span>
+      </button>
+      <button class="card" data-full="../sunset-lookout.jpg" data-name="sunset-lookout.jpg" type="button" aria-label="Open sunset-lookout">
+        <img src="thumbs/sunset-lookout.webp" alt="sunset-lookout" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sunset-lookout</span>
+      </button>
+      <button class="card" data-full="../teal-leaves-water-droplets-pink-stems.jpg" data-name="teal-leaves-water-droplets-pink-stems.jpg" type="button" aria-label="Open teal-leaves-water-droplets-pink-stems">
+        <img src="thumbs/teal-leaves-water-droplets-pink-stems.webp" alt="teal-leaves-water-droplets-pink-stems" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">teal-leaves-water-droplets-pink-stems</span>
+      </button>
+      <button class="card" data-full="../tokyo-night-10.jpg" data-name="tokyo-night-10.jpg" type="button" aria-label="Open tokyo-night-10">
+        <img src="thumbs/tokyo-night-10.webp" alt="tokyo-night-10" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">tokyo-night-10</span>
+      </button>
+      <button class="card" data-full="../tokyo-night-23.jpg" data-name="tokyo-night-23.jpg" type="button" aria-label="Open tokyo-night-23">
+        <img src="thumbs/tokyo-night-23.webp" alt="tokyo-night-23" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">tokyo-night-23</span>
+      </button>
+      <button class="card" data-full="../topdown-colorful-village-flower-garden.jpg" data-name="topdown-colorful-village-flower-garden.jpg" type="button" aria-label="Open topdown-colorful-village-flower-garden">
+        <img src="thumbs/topdown-colorful-village-flower-garden.webp" alt="topdown-colorful-village-flower-garden" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">topdown-colorful-village-flower-garden</span>
+      </button>
+      <button class="card" data-full="../tower-night.jpg" data-name="tower-night.jpg" type="button" aria-label="Open tower-night">
+        <img src="thumbs/tower-night.webp" alt="tower-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">tower-night</span>
+      </button>
+      <button class="card" data-full="../train-sideview.jpg" data-name="train-sideview.jpg" type="button" aria-label="Open train-sideview">
+        <img src="thumbs/train-sideview.webp" alt="train-sideview" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">train-sideview</span>
+      </button>
+      <button class="card" data-full="../train-station.jpg" data-name="train-station.jpg" type="button" aria-label="Open train-station">
+        <img src="thumbs/train-station.webp" alt="train-station" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">train-station</span>
+      </button>
+      <button class="card" data-full="../tree-2.jpg" data-name="tree-2.jpg" type="button" aria-label="Open tree-2">
+        <img src="thumbs/tree-2.webp" alt="tree-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">tree-2</span>
+      </button>
+      <button class="card" data-full="../tree-optimism.jpg" data-name="tree-optimism.jpg" type="button" aria-label="Open tree-optimism">
+        <img src="thumbs/tree-optimism.webp" alt="tree-optimism" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">tree-optimism</span>
+      </button>
+      <button class="card" data-full="../tree.jpg" data-name="tree.jpg" type="button" aria-label="Open tree">
+        <img src="thumbs/tree.webp" alt="tree" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">tree</span>
+      </button>
+      <button class="card" data-full="../underwater-deep-blue.jpg" data-name="underwater-deep-blue.jpg" type="button" aria-label="Open underwater-deep-blue">
+        <img src="thumbs/underwater-deep-blue.webp" alt="underwater-deep-blue" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">underwater-deep-blue</span>
+      </button>
+      <button class="card" data-full="../urban-night-sky.jpg" data-name="urban-night-sky.jpg" type="button" aria-label="Open urban-night-sky">
+        <img src="thumbs/urban-night-sky.webp" alt="urban-night-sky" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">urban-night-sky</span>
+      </button>
+      <button class="card" data-full="../wall-gazing-silhouette-planets-stars-162.jpg" data-name="wall-gazing-silhouette-planets-stars-162.jpg" type="button" aria-label="Open wall-gazing-silhouette-planets-stars-162">
+        <img src="thumbs/wall-gazing-silhouette-planets-stars-162.webp" alt="wall-gazing-silhouette-planets-stars-162" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-gazing-silhouette-planets-stars-162</span>
+      </button>
+      <button class="card" data-full="../wall-ghost-starry-night-painting-20250110-115405.jpg" data-name="wall-ghost-starry-night-painting-20250110-115405.jpg" type="button" aria-label="Open wall-ghost-starry-night-painting-20250110-115405">
+        <img src="thumbs/wall-ghost-starry-night-painting-20250110-115405.webp" alt="wall-ghost-starry-night-painting-20250110-115405" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-ghost-starry-night-painting-20250110-115405</span>
+      </button>
+      <button class="card" data-full="../wall-hobbit-village-misty-forest-386.jpg" data-name="wall-hobbit-village-misty-forest-386.jpg" type="button" aria-label="Open wall-hobbit-village-misty-forest-386">
+        <img src="thumbs/wall-hobbit-village-misty-forest-386.webp" alt="wall-hobbit-village-misty-forest-386" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-hobbit-village-misty-forest-386</span>
+      </button>
+      <button class="card" data-full="../wall-link-sunny-hyrule-valley-20241209-183028.jpg" data-name="wall-link-sunny-hyrule-valley-20241209-183028.jpg" type="button" aria-label="Open wall-link-sunny-hyrule-valley-20241209-183028">
+        <img src="thumbs/wall-link-sunny-hyrule-valley-20241209-183028.webp" alt="wall-link-sunny-hyrule-valley-20241209-183028" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-link-sunny-hyrule-valley-20241209-183028</span>
+      </button>
+      <button class="card" data-full="../wall-misty-mountain-forest-triangle-387.jpg" data-name="wall-misty-mountain-forest-triangle-387.jpg" type="button" aria-label="Open wall-misty-mountain-forest-triangle-387">
+        <img src="thumbs/wall-misty-mountain-forest-triangle-387.webp" alt="wall-misty-mountain-forest-triangle-387" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-misty-mountain-forest-triangle-387</span>
+      </button>
+      <button class="card" data-full="../wall-neon-rainy-city-night-55.jpg" data-name="wall-neon-rainy-city-night-55.jpg" type="button" aria-label="Open wall-neon-rainy-city-night-55">
+        <img src="thumbs/wall-neon-rainy-city-night-55.webp" alt="wall-neon-rainy-city-night-55" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-neon-rainy-city-night-55</span>
+      </button>
+      <button class="card" data-full="../wall-pink-sunset-winding-river-38.jpg" data-name="wall-pink-sunset-winding-river-38.jpg" type="button" aria-label="Open wall-pink-sunset-winding-river-38">
+        <img src="thumbs/wall-pink-sunset-winding-river-38.webp" alt="wall-pink-sunset-winding-river-38" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-pink-sunset-winding-river-38</span>
+      </button>
+      <button class="card" data-full="../wall-purple-sunset-lake-blossoms-76.jpg" data-name="wall-purple-sunset-lake-blossoms-76.jpg" type="button" aria-label="Open wall-purple-sunset-lake-blossoms-76">
+        <img src="thumbs/wall-purple-sunset-lake-blossoms-76.webp" alt="wall-purple-sunset-lake-blossoms-76" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-purple-sunset-lake-blossoms-76</span>
+      </button>
+      <button class="card" data-full="../wall-sailing-ship-orange-sunset-20250212-121228.jpg" data-name="wall-sailing-ship-orange-sunset-20250212-121228.jpg" type="button" aria-label="Open wall-sailing-ship-orange-sunset-20250212-121228">
+        <img src="thumbs/wall-sailing-ship-orange-sunset-20250212-121228.webp" alt="wall-sailing-ship-orange-sunset-20250212-121228" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-sailing-ship-orange-sunset-20250212-121228</span>
+      </button>
+      <button class="card" data-full="../wall-snowy-mountain-village-pixel-04.jpg" data-name="wall-snowy-mountain-village-pixel-04.jpg" type="button" aria-label="Open wall-snowy-mountain-village-pixel-04">
+        <img src="thumbs/wall-snowy-mountain-village-pixel-04.webp" alt="wall-snowy-mountain-village-pixel-04" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-snowy-mountain-village-pixel-04</span>
+      </button>
+      <button class="card" data-full="../wall-stormy-sea-stacks-waves-20250119-181257.jpg" data-name="wall-stormy-sea-stacks-waves-20250119-181257.jpg" type="button" aria-label="Open wall-stormy-sea-stacks-waves-20250119-181257">
+        <img src="thumbs/wall-stormy-sea-stacks-waves-20250119-181257.webp" alt="wall-stormy-sea-stacks-waves-20250119-181257" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-stormy-sea-stacks-waves-20250119-181257</span>
+      </button>
+      <button class="card" data-full="../wall-teal-hair-skull-plum-blossoms-30.jpg" data-name="wall-teal-hair-skull-plum-blossoms-30.jpg" type="button" aria-label="Open wall-teal-hair-skull-plum-blossoms-30">
+        <img src="thumbs/wall-teal-hair-skull-plum-blossoms-30.webp" alt="wall-teal-hair-skull-plum-blossoms-30" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-teal-hair-skull-plum-blossoms-30</span>
+      </button>
+      <button class="card" data-full="../waterfall.jpg" data-name="waterfall.jpg" type="button" aria-label="Open waterfall">
+        <img src="thumbs/waterfall.webp" alt="waterfall" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">waterfall</span>
+      </button>
+      <button class="card" data-full="../waves-3.jpg" data-name="waves-3.jpg" type="button" aria-label="Open waves-3">
+        <img src="thumbs/waves-3.webp" alt="waves-3" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">waves-3</span>
+      </button>
+      <button class="card" data-full="../winter-9.jpg" data-name="winter-9.jpg" type="button" aria-label="Open winter-9">
+        <img src="thumbs/winter-9.webp" alt="winter-9" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">winter-9</span>
+      </button>
+      </div>
+    </section>
+    <section id="cat-urban-and-nightlife">
+      <h2>Urban &amp; Nightlife <small>38</small></h2>
+      <div class="grid">
+      <button class="card" data-full="../biker.jpg" data-name="biker.jpg" type="button" aria-label="Open biker">
+        <img src="thumbs/biker.webp" alt="biker" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">biker</span>
+      </button>
+      <button class="card" data-full="../blue-bridge.jpg" data-name="blue-bridge.jpg" type="button" aria-label="Open blue-bridge">
+        <img src="thumbs/blue-bridge.webp" alt="blue-bridge" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">blue-bridge</span>
+      </button>
+      <button class="card" data-full="../brown-city.jpg" data-name="brown-city.jpg" type="button" aria-label="Open brown-city">
+        <img src="thumbs/brown-city.webp" alt="brown-city" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">brown-city</span>
+      </button>
+      <button class="card" data-full="../bunnies-road.jpg" data-name="bunnies-road.jpg" type="button" aria-label="Open bunnies-road">
+        <img src="thumbs/bunnies-road.webp" alt="bunnies-road" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">bunnies-road</span>
+      </button>
+      <button class="card" data-full="../car-2-synthwave.jpg" data-name="car-2-synthwave.jpg" type="button" aria-label="Open car-2-synthwave">
+        <img src="thumbs/car-2-synthwave.webp" alt="car-2-synthwave" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">car-2-synthwave</span>
+      </button>
+      <button class="card" data-full="../car-parked-outside-motel.jpg" data-name="car-parked-outside-motel.jpg" type="button" aria-label="Open car-parked-outside-motel">
+        <img src="thumbs/car-parked-outside-motel.webp" alt="car-parked-outside-motel" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">car-parked-outside-motel</span>
+      </button>
+      <button class="card" data-full="../car-wreck.jpg" data-name="car-wreck.jpg" type="button" aria-label="Open car-wreck">
+        <img src="thumbs/car-wreck.webp" alt="car-wreck" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">car-wreck</span>
+      </button>
+      <button class="card" data-full="../cartoon-castle.jpg" data-name="cartoon-castle.jpg" type="button" aria-label="Open cartoon-castle">
+        <img src="thumbs/cartoon-castle.webp" alt="cartoon-castle" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cartoon-castle</span>
+      </button>
+      <button class="card" data-full="../city-horizon.jpg" data-name="city-horizon.jpg" type="button" aria-label="Open city-horizon">
+        <img src="thumbs/city-horizon.webp" alt="city-horizon" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">city-horizon</span>
+      </button>
+      <button class="card" data-full="../city.jpg" data-name="city.jpg" type="button" aria-label="Open city">
+        <img src="thumbs/city.webp" alt="city" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">city</span>
+      </button>
+      <button class="card" data-full="../fantasy-city.jpg" data-name="fantasy-city.jpg" type="button" aria-label="Open fantasy-city">
+        <img src="thumbs/fantasy-city.webp" alt="fantasy-city" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">fantasy-city</span>
+      </button>
+      <button class="card" data-full="../ferris-wheel.jpg" data-name="ferris-wheel.jpg" type="button" aria-label="Open ferris-wheel">
+        <img src="thumbs/ferris-wheel.webp" alt="ferris-wheel" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">ferris-wheel</span>
+      </button>
+      <button class="card" data-full="../gate.jpg" data-name="gate.jpg" type="button" aria-label="Open gate">
+        <img src="thumbs/gate.webp" alt="gate" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">gate</span>
+      </button>
+      <button class="card" data-full="../green-bus.jpg" data-name="green-bus.jpg" type="button" aria-label="Open green-bus">
+        <img src="thumbs/green-bus.webp" alt="green-bus" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">green-bus</span>
+      </button>
+      <button class="card" data-full="../green-house.jpg" data-name="green-house.jpg" type="button" aria-label="Open green-house">
+        <img src="thumbs/green-house.webp" alt="green-house" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">green-house</span>
+      </button>
+      <button class="card" data-full="../harbor.jpg" data-name="harbor.jpg" type="button" aria-label="Open harbor">
+        <img src="thumbs/harbor.webp" alt="harbor" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">harbor</span>
+      </button>
+      <button class="card" data-full="../haunted-house.jpg" data-name="haunted-house.jpg" type="button" aria-label="Open haunted-house">
+        <img src="thumbs/haunted-house.webp" alt="haunted-house" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">haunted-house</span>
+      </button>
+      <button class="card" data-full="../lighthouse.jpg" data-name="lighthouse.jpg" type="button" aria-label="Open lighthouse">
+        <img src="thumbs/lighthouse.webp" alt="lighthouse" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lighthouse</span>
+      </button>
+      <button class="card" data-full="../mars-car.jpg" data-name="mars-car.jpg" type="button" aria-label="Open mars-car">
+        <img src="thumbs/mars-car.webp" alt="mars-car" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">mars-car</span>
+      </button>
+      <button class="card" data-full="../native-ruins.jpg" data-name="native-ruins.jpg" type="button" aria-label="Open native-ruins">
+        <img src="thumbs/native-ruins.webp" alt="native-ruins" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">native-ruins</span>
+      </button>
+      <button class="card" data-full="../neon-car.jpg" data-name="neon-car.jpg" type="button" aria-label="Open neon-car">
+        <img src="thumbs/neon-car.webp" alt="neon-car" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">neon-car</span>
+      </button>
+      <button class="card" data-full="../painting-road-cafe.jpg" data-name="painting-road-cafe.jpg" type="button" aria-label="Open painting-road-cafe">
+        <img src="thumbs/painting-road-cafe.webp" alt="painting-road-cafe" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">painting-road-cafe</span>
+      </button>
+      <button class="card" data-full="../persons-feet-in-car.jpg" data-name="persons-feet-in-car.jpg" type="button" aria-label="Open persons-feet-in-car">
+        <img src="thumbs/persons-feet-in-car.webp" alt="persons-feet-in-car" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">persons-feet-in-car</span>
+      </button>
+      <button class="card" data-full="../platform.jpg" data-name="platform.jpg" type="button" aria-label="Open platform">
+        <img src="thumbs/platform.webp" alt="platform" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">platform</span>
+      </button>
+      <button class="card" data-full="../railroad.jpg" data-name="railroad.jpg" type="button" aria-label="Open railroad">
+        <img src="thumbs/railroad.webp" alt="railroad" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">railroad</span>
+      </button>
+      <button class="card" data-full="../red-city.jpg" data-name="red-city.jpg" type="button" aria-label="Open red-city">
+        <img src="thumbs/red-city.webp" alt="red-city" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">red-city</span>
+      </button>
+      <button class="card" data-full="../retro-suited-men-vintage-police-cars.jpg" data-name="retro-suited-men-vintage-police-cars.jpg" type="button" aria-label="Open retro-suited-men-vintage-police-cars">
+        <img src="thumbs/retro-suited-men-vintage-police-cars.webp" alt="retro-suited-men-vintage-police-cars" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">retro-suited-men-vintage-police-cars</span>
+      </button>
+      <button class="card" data-full="../road-2.jpg" data-name="road-2.jpg" type="button" aria-label="Open road-2">
+        <img src="thumbs/road-2.webp" alt="road-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">road-2</span>
+      </button>
+      <button class="card" data-full="../road.jpg" data-name="road.jpg" type="button" aria-label="Open road">
+        <img src="thumbs/road.webp" alt="road" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">road</span>
+      </button>
+      <button class="card" data-full="../ship-2.jpg" data-name="ship-2.jpg" type="button" aria-label="Open ship-2">
+        <img src="thumbs/ship-2.webp" alt="ship-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">ship-2</span>
+      </button>
+      <button class="card" data-full="../ship-3.jpg" data-name="ship-3.jpg" type="button" aria-label="Open ship-3">
+        <img src="thumbs/ship-3.webp" alt="ship-3" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">ship-3</span>
+      </button>
+      <button class="card" data-full="../subway.jpg" data-name="subway.jpg" type="button" aria-label="Open subway">
+        <img src="thumbs/subway.webp" alt="subway" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">subway</span>
+      </button>
+      <button class="card" data-full="../temple-of-the-setting-sun.jpg" data-name="temple-of-the-setting-sun.jpg" type="button" aria-label="Open temple-of-the-setting-sun">
+        <img src="thumbs/temple-of-the-setting-sun.webp" alt="temple-of-the-setting-sun" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">temple-of-the-setting-sun</span>
+      </button>
+      <button class="card" data-full="../temple.jpg" data-name="temple.jpg" type="button" aria-label="Open temple">
+        <img src="thumbs/temple.webp" alt="temple" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">temple</span>
+      </button>
+      <button class="card" data-full="../tropical-bay-sailing-ship-aerial.jpg" data-name="tropical-bay-sailing-ship-aerial.jpg" type="button" aria-label="Open tropical-bay-sailing-ship-aerial">
+        <img src="thumbs/tropical-bay-sailing-ship-aerial.webp" alt="tropical-bay-sailing-ship-aerial" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">tropical-bay-sailing-ship-aerial</span>
+      </button>
+      <button class="card" data-full="../van.jpg" data-name="van.jpg" type="button" aria-label="Open van">
+        <img src="thumbs/van.webp" alt="van" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">van</span>
+      </button>
+      <button class="card" data-full="../village-gate.jpg" data-name="village-gate.jpg" type="button" aria-label="Open village-gate">
+        <img src="thumbs/village-gate.webp" alt="village-gate" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">village-gate</span>
+      </button>
+      <button class="card" data-full="../wall-bridge-silhouette-city-peach-54.jpg" data-name="wall-bridge-silhouette-city-peach-54.jpg" type="button" aria-label="Open wall-bridge-silhouette-city-peach-54">
+        <img src="thumbs/wall-bridge-silhouette-city-peach-54.webp" alt="wall-bridge-silhouette-city-peach-54" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-bridge-silhouette-city-peach-54</span>
+      </button>
+      </div>
+    </section>
+    <section id="cat-lo-fi-and-cozy">
+      <h2>Lo-fi &amp; Cozy <small>41</small></h2>
+      <div class="grid">
+      <button class="card" data-full="../anime-room.jpg" data-name="anime-room.jpg" type="button" aria-label="Open anime-room">
+        <img src="thumbs/anime-room.webp" alt="anime-room" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">anime-room</span>
+      </button>
+      <button class="card" data-full="../balcony-laundry-peach-cloud-paper-plane.jpg" data-name="balcony-laundry-peach-cloud-paper-plane.jpg" type="button" aria-label="Open balcony-laundry-peach-cloud-paper-plane">
+        <img src="thumbs/balcony-laundry-peach-cloud-paper-plane.webp" alt="balcony-laundry-peach-cloud-paper-plane" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">balcony-laundry-peach-cloud-paper-plane</span>
+      </button>
+      <button class="card" data-full="../cabin-2.jpg" data-name="cabin-2.jpg" type="button" aria-label="Open cabin-2">
+        <img src="thumbs/cabin-2.webp" alt="cabin-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cabin-2</span>
+      </button>
+      <button class="card" data-full="../cabin.jpg" data-name="cabin.jpg" type="button" aria-label="Open cabin">
+        <img src="thumbs/cabin.webp" alt="cabin" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cabin</span>
+      </button>
+      <button class="card" data-full="../chill-night.jpg" data-name="chill-night.jpg" type="button" aria-label="Open chill-night">
+        <img src="thumbs/chill-night.webp" alt="chill-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">chill-night</span>
+      </button>
+      <button class="card" data-full="../coffee-shop.jpg" data-name="coffee-shop.jpg" type="button" aria-label="Open coffee-shop">
+        <img src="thumbs/coffee-shop.webp" alt="coffee-shop" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">coffee-shop</span>
+      </button>
+      <button class="card" data-full="../cosy-retreat-sunset.jpg" data-name="cosy-retreat-sunset.jpg" type="button" aria-label="Open cosy-retreat-sunset">
+        <img src="thumbs/cosy-retreat-sunset.webp" alt="cosy-retreat-sunset" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cosy-retreat-sunset</span>
+      </button>
+      <button class="card" data-full="../cozy-cottage-flower-garden-sunny.jpg" data-name="cozy-cottage-flower-garden-sunny.jpg" type="button" aria-label="Open cozy-cottage-flower-garden-sunny">
+        <img src="thumbs/cozy-cottage-flower-garden-sunny.webp" alt="cozy-cottage-flower-garden-sunny" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cozy-cottage-flower-garden-sunny</span>
+      </button>
+      <button class="card" data-full="../cute-sloth-relaxing.jpg" data-name="cute-sloth-relaxing.jpg" type="button" aria-label="Open cute-sloth-relaxing">
+        <img src="thumbs/cute-sloth-relaxing.webp" alt="cute-sloth-relaxing" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cute-sloth-relaxing</span>
+      </button>
+      <button class="card" data-full="../food-truck.jpg" data-name="food-truck.jpg" type="button" aria-label="Open food-truck">
+        <img src="thumbs/food-truck.webp" alt="food-truck" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">food-truck</span>
+      </button>
+      <button class="card" data-full="../forest-bookstore.jpg" data-name="forest-bookstore.jpg" type="button" aria-label="Open forest-bookstore">
+        <img src="thumbs/forest-bookstore.webp" alt="forest-bookstore" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">forest-bookstore</span>
+      </button>
+      <button class="card" data-full="../forest-mushrooms-pastel.jpg" data-name="forest-mushrooms-pastel.jpg" type="button" aria-label="Open forest-mushrooms-pastel">
+        <img src="thumbs/forest-mushrooms-pastel.webp" alt="forest-mushrooms-pastel" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">forest-mushrooms-pastel</span>
+      </button>
+      <button class="card" data-full="../girl-sword-cottage-orange-sunset-mountains.jpg" data-name="girl-sword-cottage-orange-sunset-mountains.jpg" type="button" aria-label="Open girl-sword-cottage-orange-sunset-mountains">
+        <img src="thumbs/girl-sword-cottage-orange-sunset-mountains.webp" alt="girl-sword-cottage-orange-sunset-mountains" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">girl-sword-cottage-orange-sunset-mountains</span>
+      </button>
+      <button class="card" data-full="../gruvbox-room.jpg" data-name="gruvbox-room.jpg" type="button" aria-label="Open gruvbox-room">
+        <img src="thumbs/gruvbox-room.webp" alt="gruvbox-room" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">gruvbox-room</span>
+      </button>
+      <button class="card" data-full="../javascript-coffee-spill-confetti.jpg" data-name="javascript-coffee-spill-confetti.jpg" type="button" aria-label="Open javascript-coffee-spill-confetti">
+        <img src="thumbs/javascript-coffee-spill-confetti.webp" alt="javascript-coffee-spill-confetti" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">javascript-coffee-spill-confetti</span>
+      </button>
+      <button class="card" data-full="../laidback.jpg" data-name="laidback.jpg" type="button" aria-label="Open laidback">
+        <img src="thumbs/laidback.webp" alt="laidback" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">laidback</span>
+      </button>
+      <button class="card" data-full="../laundry.jpg" data-name="laundry.jpg" type="button" aria-label="Open laundry">
+        <img src="thumbs/laundry.webp" alt="laundry" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">laundry</span>
+      </button>
+      <button class="card" data-full="../lavender-fields-sunset-cottage.jpg" data-name="lavender-fields-sunset-cottage.jpg" type="button" aria-label="Open lavender-fields-sunset-cottage">
+        <img src="thumbs/lavender-fields-sunset-cottage.webp" alt="lavender-fields-sunset-cottage" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lavender-fields-sunset-cottage</span>
+      </button>
+      <button class="card" data-full="../lofi-anime-girl.jpg" data-name="lofi-anime-girl.jpg" type="button" aria-label="Open lofi-anime-girl">
+        <img src="thumbs/lofi-anime-girl.webp" alt="lofi-anime-girl" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-anime-girl</span>
+      </button>
+      <button class="card" data-full="../lofi-anime-room.jpg" data-name="lofi-anime-room.jpg" type="button" aria-label="Open lofi-anime-room">
+        <img src="thumbs/lofi-anime-room.webp" alt="lofi-anime-room" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-anime-room</span>
+      </button>
+      <button class="card" data-full="../lofi-cat.jpg" data-name="lofi-cat.jpg" type="button" aria-label="Open lofi-cat">
+        <img src="thumbs/lofi-cat.webp" alt="lofi-cat" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-cat</span>
+      </button>
+      <button class="card" data-full="../lofi-chill-room-2.jpg" data-name="lofi-chill-room-2.jpg" type="button" aria-label="Open lofi-chill-room-2">
+        <img src="thumbs/lofi-chill-room-2.webp" alt="lofi-chill-room-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-chill-room-2</span>
+      </button>
+      <button class="card" data-full="../lofi-chill-room.jpg" data-name="lofi-chill-room.jpg" type="button" aria-label="Open lofi-chill-room">
+        <img src="thumbs/lofi-chill-room.webp" alt="lofi-chill-room" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-chill-room</span>
+      </button>
+      <button class="card" data-full="../lofi-desktop-man-studying.jpg" data-name="lofi-desktop-man-studying.jpg" type="button" aria-label="Open lofi-desktop-man-studying">
+        <img src="thumbs/lofi-desktop-man-studying.webp" alt="lofi-desktop-man-studying" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-desktop-man-studying</span>
+      </button>
+      <button class="card" data-full="../lofi-night.jpg" data-name="lofi-night.jpg" type="button" aria-label="Open lofi-night">
+        <img src="thumbs/lofi-night.webp" alt="lofi-night" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-night</span>
+      </button>
+      <button class="card" data-full="../lofi-room.jpg" data-name="lofi-room.jpg" type="button" aria-label="Open lofi-room">
+        <img src="thumbs/lofi-room.webp" alt="lofi-room" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-room</span>
+      </button>
+      <button class="card" data-full="../lofi-seatback.jpg" data-name="lofi-seatback.jpg" type="button" aria-label="Open lofi-seatback">
+        <img src="thumbs/lofi-seatback.webp" alt="lofi-seatback" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-seatback</span>
+      </button>
+      <button class="card" data-full="../lofi-sofa.jpg" data-name="lofi-sofa.jpg" type="button" aria-label="Open lofi-sofa">
+        <img src="thumbs/lofi-sofa.webp" alt="lofi-sofa" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-sofa</span>
+      </button>
+      <button class="card" data-full="../lofi-study.jpg" data-name="lofi-study.jpg" type="button" aria-label="Open lofi-study">
+        <img src="thumbs/lofi-study.webp" alt="lofi-study" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-study</span>
+      </button>
+      <button class="card" data-full="../lofi-table.jpg" data-name="lofi-table.jpg" type="button" aria-label="Open lofi-table">
+        <img src="thumbs/lofi-table.webp" alt="lofi-table" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lofi-table</span>
+      </button>
+      <button class="card" data-full="../moments-before-desk.jpg" data-name="moments-before-desk.jpg" type="button" aria-label="Open moments-before-desk">
+        <img src="thumbs/moments-before-desk.webp" alt="moments-before-desk" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">moments-before-desk</span>
+      </button>
+      <button class="card" data-full="../mossy-forest-sunbeams-flowers-mushrooms.jpg" data-name="mossy-forest-sunbeams-flowers-mushrooms.jpg" type="button" aria-label="Open mossy-forest-sunbeams-flowers-mushrooms">
+        <img src="thumbs/mossy-forest-sunbeams-flowers-mushrooms.webp" alt="mossy-forest-sunbeams-flowers-mushrooms" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">mossy-forest-sunbeams-flowers-mushrooms</span>
+      </button>
+      <button class="card" data-full="../piano-couple-red-sunset-sea.jpg" data-name="piano-couple-red-sunset-sea.jpg" type="button" aria-label="Open piano-couple-red-sunset-sea">
+        <img src="thumbs/piano-couple-red-sunset-sea.webp" alt="piano-couple-red-sunset-sea" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">piano-couple-red-sunset-sea</span>
+      </button>
+      <button class="card" data-full="../piano-in-forest.jpg" data-name="piano-in-forest.jpg" type="button" aria-label="Open piano-in-forest">
+        <img src="thumbs/piano-in-forest.webp" alt="piano-in-forest" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">piano-in-forest</span>
+      </button>
+      <button class="card" data-full="../red-room.jpg" data-name="red-room.jpg" type="button" aria-label="Open red-room">
+        <img src="thumbs/red-room.webp" alt="red-room" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">red-room</span>
+      </button>
+      <button class="card" data-full="../relaxation.jpg" data-name="relaxation.jpg" type="button" aria-label="Open relaxation">
+        <img src="thumbs/relaxation.webp" alt="relaxation" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">relaxation</span>
+      </button>
+      <button class="card" data-full="../samurai-girl-chill.jpg" data-name="samurai-girl-chill.jpg" type="button" aria-label="Open samurai-girl-chill">
+        <img src="thumbs/samurai-girl-chill.webp" alt="samurai-girl-chill" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">samurai-girl-chill</span>
+      </button>
+      <button class="card" data-full="../space-piano.jpg" data-name="space-piano.jpg" type="button" aria-label="Open space-piano">
+        <img src="thumbs/space-piano.webp" alt="space-piano" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">space-piano</span>
+      </button>
+      <button class="card" data-full="../sunset-room.jpg" data-name="sunset-room.jpg" type="button" aria-label="Open sunset-room">
+        <img src="thumbs/sunset-room.webp" alt="sunset-room" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sunset-room</span>
+      </button>
+      <button class="card" data-full="../van-chilling.jpg" data-name="van-chilling.jpg" type="button" aria-label="Open van-chilling">
+        <img src="thumbs/van-chilling.webp" alt="van-chilling" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">van-chilling</span>
+      </button>
+      <button class="card" data-full="../venice-market.jpg" data-name="venice-market.jpg" type="button" aria-label="Open venice-market">
+        <img src="thumbs/venice-market.webp" alt="venice-market" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">venice-market</span>
+      </button>
+      </div>
+    </section>
+    <section id="cat-abstract-and-minimal">
+      <h2>Abstract &amp; Minimal <small>35</small></h2>
+      <div class="grid">
+      <button class="card" data-full="../abstract-2.jpg" data-name="abstract-2.jpg" type="button" aria-label="Open abstract-2">
+        <img src="thumbs/abstract-2.webp" alt="abstract-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">abstract-2</span>
+      </button>
+      <button class="card" data-full="../abstract-layered-waves-dark-blue.jpg" data-name="abstract-layered-waves-dark-blue.jpg" type="button" aria-label="Open abstract-layered-waves-dark-blue">
+        <img src="thumbs/abstract-layered-waves-dark-blue.webp" alt="abstract-layered-waves-dark-blue" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">abstract-layered-waves-dark-blue</span>
+      </button>
+      <button class="card" data-full="../abstract-layered-waves-magenta-navy.jpg" data-name="abstract-layered-waves-magenta-navy.jpg" type="button" aria-label="Open abstract-layered-waves-magenta-navy">
+        <img src="thumbs/abstract-layered-waves-magenta-navy.webp" alt="abstract-layered-waves-magenta-navy" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">abstract-layered-waves-magenta-navy</span>
+      </button>
+      <button class="card" data-full="../abstract.jpg" data-name="abstract.jpg" type="button" aria-label="Open abstract">
+        <img src="thumbs/abstract.webp" alt="abstract" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">abstract</span>
+      </button>
+      <button class="card" data-full="../arcade-decay-red.jpg" data-name="arcade-decay-red.jpg" type="button" aria-label="Open arcade-decay-red">
+        <img src="thumbs/arcade-decay-red.webp" alt="arcade-decay-red" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">arcade-decay-red</span>
+      </button>
+      <button class="card" data-full="../art.jpg" data-name="art.jpg" type="button" aria-label="Open art">
+        <img src="thumbs/art.webp" alt="art" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">art</span>
+      </button>
+      <button class="card" data-full="../chinese-painting-1.jpg" data-name="chinese-painting-1.jpg" type="button" aria-label="Open chinese-painting-1">
+        <img src="thumbs/chinese-painting-1.webp" alt="chinese-painting-1" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">chinese-painting-1</span>
+      </button>
+      <button class="card" data-full="../chinese-painting-2.jpg" data-name="chinese-painting-2.jpg" type="button" aria-label="Open chinese-painting-2">
+        <img src="thumbs/chinese-painting-2.webp" alt="chinese-painting-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">chinese-painting-2</span>
+      </button>
+      <button class="card" data-full="../circuits.jpg" data-name="circuits.jpg" type="button" aria-label="Open circuits">
+        <img src="thumbs/circuits.webp" alt="circuits" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">circuits</span>
+      </button>
+      <button class="card" data-full="../colorful-geometric.jpg" data-name="colorful-geometric.jpg" type="button" aria-label="Open colorful-geometric">
+        <img src="thumbs/colorful-geometric.webp" alt="colorful-geometric" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">colorful-geometric</span>
+      </button>
+      <button class="card" data-full="../colorful-planets.jpg" data-name="colorful-planets.jpg" type="button" aria-label="Open colorful-planets">
+        <img src="thumbs/colorful-planets.webp" alt="colorful-planets" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">colorful-planets</span>
+      </button>
+      <button class="card" data-full="../dark-pixelart.jpg" data-name="dark-pixelart.jpg" type="button" aria-label="Open dark-pixelart">
+        <img src="thumbs/dark-pixelart.webp" alt="dark-pixelart" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">dark-pixelart</span>
+      </button>
+      <button class="card" data-full="../darkness.jpg" data-name="darkness.jpg" type="button" aria-label="Open darkness">
+        <img src="thumbs/darkness.webp" alt="darkness" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">darkness</span>
+      </button>
+      <button class="card" data-full="../dreamy.jpg" data-name="dreamy.jpg" type="button" aria-label="Open dreamy">
+        <img src="thumbs/dreamy.webp" alt="dreamy" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">dreamy</span>
+      </button>
+      <button class="card" data-full="../flaming-skull-skeleton-dark-art.jpg" data-name="flaming-skull-skeleton-dark-art.jpg" type="button" aria-label="Open flaming-skull-skeleton-dark-art">
+        <img src="thumbs/flaming-skull-skeleton-dark-art.webp" alt="flaming-skull-skeleton-dark-art" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">flaming-skull-skeleton-dark-art</span>
+      </button>
+      <button class="card" data-full="../geometric-semicircle-tiles-retro-green.jpg" data-name="geometric-semicircle-tiles-retro-green.jpg" type="button" aria-label="Open geometric-semicircle-tiles-retro-green">
+        <img src="thumbs/geometric-semicircle-tiles-retro-green.webp" alt="geometric-semicircle-tiles-retro-green" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">geometric-semicircle-tiles-retro-green</span>
+      </button>
+      <button class="card" data-full="../green.jpg" data-name="green.jpg" type="button" aria-label="Open green">
+        <img src="thumbs/green.webp" alt="green" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">green</span>
+      </button>
+      <button class="card" data-full="../layered-purple-pink-waves-abstract.jpg" data-name="layered-purple-pink-waves-abstract.jpg" type="button" aria-label="Open layered-purple-pink-waves-abstract">
+        <img src="thumbs/layered-purple-pink-waves-abstract.webp" alt="layered-purple-pink-waves-abstract" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">layered-purple-pink-waves-abstract</span>
+      </button>
+      <button class="card" data-full="../paint.jpg" data-name="paint.jpg" type="button" aria-label="Open paint">
+        <img src="thumbs/paint.webp" alt="paint" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">paint</span>
+      </button>
+      <button class="card" data-full="../painting-standing.jpg" data-name="painting-standing.jpg" type="button" aria-label="Open painting-standing">
+        <img src="thumbs/painting-standing.webp" alt="painting-standing" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">painting-standing</span>
+      </button>
+      <button class="card" data-full="../painting.jpg" data-name="painting.jpg" type="button" aria-label="Open painting">
+        <img src="thumbs/painting.webp" alt="painting" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">painting</span>
+      </button>
+      <button class="card" data-full="../pastel-window.jpg" data-name="pastel-window.jpg" type="button" aria-label="Open pastel-window">
+        <img src="thumbs/pastel-window.webp" alt="pastel-window" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">pastel-window</span>
+      </button>
+      <button class="card" data-full="../plane-purple.jpg" data-name="plane-purple.jpg" type="button" aria-label="Open plane-purple">
+        <img src="thumbs/plane-purple.webp" alt="plane-purple" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">plane-purple</span>
+      </button>
+      <button class="card" data-full="../purple-back.jpg" data-name="purple-back.jpg" type="button" aria-label="Open purple-back">
+        <img src="thumbs/purple-back.webp" alt="purple-back" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">purple-back</span>
+      </button>
+      <button class="card" data-full="../purple-bomb.jpg" data-name="purple-bomb.jpg" type="button" aria-label="Open purple-bomb">
+        <img src="thumbs/purple-bomb.webp" alt="purple-bomb" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">purple-bomb</span>
+      </button>
+      <button class="card" data-full="../purple-horizon.jpg" data-name="purple-horizon.jpg" type="button" aria-label="Open purple-horizon">
+        <img src="thumbs/purple-horizon.webp" alt="purple-horizon" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">purple-horizon</span>
+      </button>
+      <button class="card" data-full="../red.jpg" data-name="red.jpg" type="button" aria-label="Open red">
+        <img src="thumbs/red.webp" alt="red" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">red</span>
+      </button>
+      <button class="card" data-full="../retro-geometric-circle-pattern-earth-tones.jpg" data-name="retro-geometric-circle-pattern-earth-tones.jpg" type="button" aria-label="Open retro-geometric-circle-pattern-earth-tones">
+        <img src="thumbs/retro-geometric-circle-pattern-earth-tones.webp" alt="retro-geometric-circle-pattern-earth-tones" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">retro-geometric-circle-pattern-earth-tones</span>
+      </button>
+      <button class="card" data-full="../rofi-purple.jpg" data-name="rofi-purple.jpg" type="button" aria-label="Open rofi-purple">
+        <img src="thumbs/rofi-purple.webp" alt="rofi-purple" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">rofi-purple</span>
+      </button>
+      <button class="card" data-full="../swirls.jpg" data-name="swirls.jpg" type="button" aria-label="Open swirls">
+        <img src="thumbs/swirls.webp" alt="swirls" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">swirls</span>
+      </button>
+      <button class="card" data-full="../swirly-painting.jpg" data-name="swirly-painting.jpg" type="button" aria-label="Open swirly-painting">
+        <img src="thumbs/swirly-painting.webp" alt="swirly-painting" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">swirly-painting</span>
+      </button>
+      <button class="card" data-full="../switch-swirl.jpg" data-name="switch-swirl.jpg" type="button" aria-label="Open switch-swirl">
+        <img src="thumbs/switch-swirl.webp" alt="switch-swirl" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">switch-swirl</span>
+      </button>
+      <button class="card" data-full="../wall-abstract-navy-wavy-layers-410.jpg" data-name="wall-abstract-navy-wavy-layers-410.jpg" type="button" aria-label="Open wall-abstract-navy-wavy-layers-410">
+        <img src="thumbs/wall-abstract-navy-wavy-layers-410.webp" alt="wall-abstract-navy-wavy-layers-410" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-abstract-navy-wavy-layers-410</span>
+      </button>
+      <button class="card" data-full="../wall-abstract-nested-diamonds-dark-131.jpg" data-name="wall-abstract-nested-diamonds-dark-131.jpg" type="button" aria-label="Open wall-abstract-nested-diamonds-dark-131">
+        <img src="thumbs/wall-abstract-nested-diamonds-dark-131.webp" alt="wall-abstract-nested-diamonds-dark-131" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-abstract-nested-diamonds-dark-131</span>
+      </button>
+      <button class="card" data-full="../wall-monochrome-fluid-marble-abstract-460.jpg" data-name="wall-monochrome-fluid-marble-abstract-460.jpg" type="button" aria-label="Open wall-monochrome-fluid-marble-abstract-460">
+        <img src="thumbs/wall-monochrome-fluid-marble-abstract-460.webp" alt="wall-monochrome-fluid-marble-abstract-460" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-monochrome-fluid-marble-abstract-460</span>
+      </button>
+      </div>
+    </section>
+    <section id="cat-photography-and-other">
+      <h2>Photography &amp; Other <small>53</small></h2>
+      <div class="grid">
+      <button class="card" data-full="../blue-haired-swordsman-golden-eyes-demons.jpg" data-name="blue-haired-swordsman-golden-eyes-demons.jpg" type="button" aria-label="Open blue-haired-swordsman-golden-eyes-demons">
+        <img src="thumbs/blue-haired-swordsman-golden-eyes-demons.webp" alt="blue-haired-swordsman-golden-eyes-demons" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">blue-haired-swordsman-golden-eyes-demons</span>
+      </button>
+      <button class="card" data-full="../burning-cherry.jpg" data-name="burning-cherry.jpg" type="button" aria-label="Open burning-cherry">
+        <img src="thumbs/burning-cherry.webp" alt="burning-cherry" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">burning-cherry</span>
+      </button>
+      <button class="card" data-full="../clear-day.jpg" data-name="clear-day.jpg" type="button" aria-label="Open clear-day">
+        <img src="thumbs/clear-day.webp" alt="clear-day" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">clear-day</span>
+      </button>
+      <button class="card" data-full="../cristina-4.jpg" data-name="cristina-4.jpg" type="button" aria-label="Open cristina-4">
+        <img src="thumbs/cristina-4.webp" alt="cristina-4" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cristina-4</span>
+      </button>
+      <button class="card" data-full="../cristina-5.jpg" data-name="cristina-5.jpg" type="button" aria-label="Open cristina-5">
+        <img src="thumbs/cristina-5.webp" alt="cristina-5" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">cristina-5</span>
+      </button>
+      <button class="card" data-full="../dark-nature.jpg" data-name="dark-nature.jpg" type="button" aria-label="Open dark-nature">
+        <img src="thumbs/dark-nature.webp" alt="dark-nature" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">dark-nature</span>
+      </button>
+      <button class="card" data-full="../dragon.jpg" data-name="dragon.jpg" type="button" aria-label="Open dragon">
+        <img src="thumbs/dragon.webp" alt="dragon" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">dragon</span>
+      </button>
+      <button class="card" data-full="../dusks-embrace.jpg" data-name="dusks-embrace.jpg" type="button" aria-label="Open dusks-embrace">
+        <img src="thumbs/dusks-embrace.webp" alt="dusks-embrace" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">dusks-embrace</span>
+      </button>
+      <button class="card" data-full="../explorer-green-day.jpg" data-name="explorer-green-day.jpg" type="button" aria-label="Open explorer-green-day">
+        <img src="thumbs/explorer-green-day.webp" alt="explorer-green-day" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">explorer-green-day</span>
+      </button>
+      <button class="card" data-full="../eyes.jpg" data-name="eyes.jpg" type="button" aria-label="Open eyes">
+        <img src="thumbs/eyes.webp" alt="eyes" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">eyes</span>
+      </button>
+      <button class="card" data-full="../fantasy-landscape-1.jpg" data-name="fantasy-landscape-1.jpg" type="button" aria-label="Open fantasy-landscape-1">
+        <img src="thumbs/fantasy-landscape-1.webp" alt="fantasy-landscape-1" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">fantasy-landscape-1</span>
+      </button>
+      <button class="card" data-full="../fantasy-landscape-2.jpg" data-name="fantasy-landscape-2.jpg" type="button" aria-label="Open fantasy-landscape-2">
+        <img src="thumbs/fantasy-landscape-2.webp" alt="fantasy-landscape-2" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">fantasy-landscape-2</span>
+      </button>
+      <button class="card" data-full="../flaming-horse-rider-inferno.jpg" data-name="flaming-horse-rider-inferno.jpg" type="button" aria-label="Open flaming-horse-rider-inferno">
+        <img src="thumbs/flaming-horse-rider-inferno.webp" alt="flaming-horse-rider-inferno" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">flaming-horse-rider-inferno</span>
+      </button>
+      <button class="card" data-full="../full-shot-ninja.jpg" data-name="full-shot-ninja.jpg" type="button" aria-label="Open full-shot-ninja">
+        <img src="thumbs/full-shot-ninja.webp" alt="full-shot-ninja" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">full-shot-ninja</span>
+      </button>
+      <button class="card" data-full="../halloween-scene.jpg" data-name="halloween-scene.jpg" type="button" aria-label="Open halloween-scene">
+        <img src="thumbs/halloween-scene.webp" alt="halloween-scene" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">halloween-scene</span>
+      </button>
+      <button class="card" data-full="../horizon.jpg" data-name="horizon.jpg" type="button" aria-label="Open horizon">
+        <img src="thumbs/horizon.webp" alt="horizon" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">horizon</span>
+      </button>
+      <button class="card" data-full="../lady.jpg" data-name="lady.jpg" type="button" aria-label="Open lady">
+        <img src="thumbs/lady.webp" alt="lady" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lady</span>
+      </button>
+      <button class="card" data-full="../large-weapon.jpg" data-name="large-weapon.jpg" type="button" aria-label="Open large-weapon">
+        <img src="thumbs/large-weapon.webp" alt="large-weapon" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">large-weapon</span>
+      </button>
+      <button class="card" data-full="../lets-go-home.jpg" data-name="lets-go-home.jpg" type="button" aria-label="Open lets-go-home">
+        <img src="thumbs/lets-go-home.webp" alt="lets-go-home" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lets-go-home</span>
+      </button>
+      <button class="card" data-full="../lightbulbs.jpg" data-name="lightbulbs.jpg" type="button" aria-label="Open lightbulbs">
+        <img src="thumbs/lightbulbs.webp" alt="lightbulbs" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">lightbulbs</span>
+      </button>
+      <button class="card" data-full="../mars.jpg" data-name="mars.jpg" type="button" aria-label="Open mars">
+        <img src="thumbs/mars.webp" alt="mars" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">mars</span>
+      </button>
+      <button class="card" data-full="../mermaid.jpg" data-name="mermaid.jpg" type="button" aria-label="Open mermaid">
+        <img src="thumbs/mermaid.webp" alt="mermaid" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">mermaid</span>
+      </button>
+      <button class="card" data-full="../omarchy-country-ag-antigua-and-barbuda-2k.webp" data-name="omarchy-country-ag-antigua-and-barbuda-2k.webp" type="button" aria-label="Open omarchy-country-ag-antigua-and-barbuda-2k">
+        <img src="thumbs/omarchy-country-ag-antigua-and-barbuda-2k.webp" alt="omarchy-country-ag-antigua-and-barbuda-2k" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">omarchy-country-ag-antigua-and-barbuda-2k</span>
+      </button>
+      <button class="card" data-full="../pavilion-morning-light.jpg" data-name="pavilion-morning-light.jpg" type="button" aria-label="Open pavilion-morning-light">
+        <img src="thumbs/pavilion-morning-light.webp" alt="pavilion-morning-light" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">pavilion-morning-light</span>
+      </button>
+      <button class="card" data-full="../pitstop.jpg" data-name="pitstop.jpg" type="button" aria-label="Open pitstop">
+        <img src="thumbs/pitstop.webp" alt="pitstop" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">pitstop</span>
+      </button>
+      <button class="card" data-full="../railway-overpass.jpg" data-name="railway-overpass.jpg" type="button" aria-label="Open railway-overpass">
+        <img src="thumbs/railway-overpass.webp" alt="railway-overpass" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">railway-overpass</span>
+      </button>
+      <button class="card" data-full="../rebellious-tower.jpg" data-name="rebellious-tower.jpg" type="button" aria-label="Open rebellious-tower">
+        <img src="thumbs/rebellious-tower.webp" alt="rebellious-tower" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">rebellious-tower</span>
+      </button>
+      <button class="card" data-full="../red-cloaked-figure-burning-village.jpg" data-name="red-cloaked-figure-burning-village.jpg" type="button" aria-label="Open red-cloaked-figure-burning-village">
+        <img src="thumbs/red-cloaked-figure-burning-village.webp" alt="red-cloaked-figure-burning-village" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">red-cloaked-figure-burning-village</span>
+      </button>
+      <button class="card" data-full="../red-note.jpg" data-name="red-note.jpg" type="button" aria-label="Open red-note">
+        <img src="thumbs/red-note.webp" alt="red-note" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">red-note</span>
+      </button>
+      <button class="card" data-full="../retro-programmer.jpg" data-name="retro-programmer.jpg" type="button" aria-label="Open retro-programmer">
+        <img src="thumbs/retro-programmer.webp" alt="retro-programmer" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">retro-programmer</span>
+      </button>
+      <button class="card" data-full="../rocket-launch.jpg" data-name="rocket-launch.jpg" type="button" aria-label="Open rocket-launch">
+        <img src="thumbs/rocket-launch.webp" alt="rocket-launch" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">rocket-launch</span>
+      </button>
+      <button class="card" data-full="../serenity.jpg" data-name="serenity.jpg" type="button" aria-label="Open serenity">
+        <img src="thumbs/serenity.webp" alt="serenity" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">serenity</span>
+      </button>
+      <button class="card" data-full="../silent-voice.jpg" data-name="silent-voice.jpg" type="button" aria-label="Open silent-voice">
+        <img src="thumbs/silent-voice.webp" alt="silent-voice" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">silent-voice</span>
+      </button>
+      <button class="card" data-full="../soaring-off.jpg" data-name="soaring-off.jpg" type="button" aria-label="Open soaring-off">
+        <img src="thumbs/soaring-off.webp" alt="soaring-off" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">soaring-off</span>
+      </button>
+      <button class="card" data-full="../solo-monarch.jpg" data-name="solo-monarch.jpg" type="button" aria-label="Open solo-monarch">
+        <img src="thumbs/solo-monarch.webp" alt="solo-monarch" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">solo-monarch</span>
+      </button>
+      <button class="card" data-full="../staircase-to-freedom.jpg" data-name="staircase-to-freedom.jpg" type="button" aria-label="Open staircase-to-freedom">
+        <img src="thumbs/staircase-to-freedom.webp" alt="staircase-to-freedom" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">staircase-to-freedom</span>
+      </button>
+      <button class="card" data-full="../sun-setting-horizon.jpg" data-name="sun-setting-horizon.jpg" type="button" aria-label="Open sun-setting-horizon">
+        <img src="thumbs/sun-setting-horizon.webp" alt="sun-setting-horizon" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sun-setting-horizon</span>
+      </button>
+      <button class="card" data-full="../sunken-tower.jpg" data-name="sunken-tower.jpg" type="button" aria-label="Open sunken-tower">
+        <img src="thumbs/sunken-tower.webp" alt="sunken-tower" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sunken-tower</span>
+      </button>
+      <button class="card" data-full="../sunny-day.jpg" data-name="sunny-day.jpg" type="button" aria-label="Open sunny-day">
+        <img src="thumbs/sunny-day.webp" alt="sunny-day" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">sunny-day</span>
+      </button>
+      <button class="card" data-full="../tabs.jpg" data-name="tabs.jpg" type="button" aria-label="Open tabs">
+        <img src="thumbs/tabs.webp" alt="tabs" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">tabs</span>
+      </button>
+      <button class="card" data-full="../techno-geek.jpg" data-name="techno-geek.jpg" type="button" aria-label="Open techno-geek">
+        <img src="thumbs/techno-geek.webp" alt="techno-geek" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">techno-geek</span>
+      </button>
+      <button class="card" data-full="../tower.jpg" data-name="tower.jpg" type="button" aria-label="Open tower">
+        <img src="thumbs/tower.webp" alt="tower" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">tower</span>
+      </button>
+      <button class="card" data-full="../venom-pink.jpg" data-name="venom-pink.jpg" type="button" aria-label="Open venom-pink">
+        <img src="thumbs/venom-pink.webp" alt="venom-pink" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">venom-pink</span>
+      </button>
+      <button class="card" data-full="../vinland.jpg" data-name="vinland.jpg" type="button" aria-label="Open vinland">
+        <img src="thumbs/vinland.webp" alt="vinland" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">vinland</span>
+      </button>
+      <button class="card" data-full="../wall-abandoned-attic-phone-booth-366.jpg" data-name="wall-abandoned-attic-phone-booth-366.jpg" type="button" aria-label="Open wall-abandoned-attic-phone-booth-366">
+        <img src="thumbs/wall-abandoned-attic-phone-booth-366.webp" alt="wall-abandoned-attic-phone-booth-366" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-abandoned-attic-phone-booth-366</span>
+      </button>
+      <button class="card" data-full="../wall-cream-spiral-dark-vortex-68.jpg" data-name="wall-cream-spiral-dark-vortex-68.jpg" type="button" aria-label="Open wall-cream-spiral-dark-vortex-68">
+        <img src="thumbs/wall-cream-spiral-dark-vortex-68.webp" alt="wall-cream-spiral-dark-vortex-68" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-cream-spiral-dark-vortex-68</span>
+      </button>
+      <button class="card" data-full="../wall-fan-skull-butterflies-red-gold-31.jpg" data-name="wall-fan-skull-butterflies-red-gold-31.jpg" type="button" aria-label="Open wall-fan-skull-butterflies-red-gold-31">
+        <img src="thumbs/wall-fan-skull-butterflies-red-gold-31.webp" alt="wall-fan-skull-butterflies-red-gold-31" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-fan-skull-butterflies-red-gold-31</span>
+      </button>
+      <button class="card" data-full="../wall-horned-skeleton-gentleman-dark-73.jpg" data-name="wall-horned-skeleton-gentleman-dark-73.jpg" type="button" aria-label="Open wall-horned-skeleton-gentleman-dark-73">
+        <img src="thumbs/wall-horned-skeleton-gentleman-dark-73.webp" alt="wall-horned-skeleton-gentleman-dark-73" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-horned-skeleton-gentleman-dark-73</span>
+      </button>
+      <button class="card" data-full="../wall-kitten-bird-coral-pink-77.jpg" data-name="wall-kitten-bird-coral-pink-77.jpg" type="button" aria-label="Open wall-kitten-bird-coral-pink-77">
+        <img src="thumbs/wall-kitten-bird-coral-pink-77.webp" alt="wall-kitten-bird-coral-pink-77" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-kitten-bird-coral-pink-77</span>
+      </button>
+      <button class="card" data-full="../wall-skull-gamer-red-monitor-20250319-173730.jpg" data-name="wall-skull-gamer-red-monitor-20250319-173730.jpg" type="button" aria-label="Open wall-skull-gamer-red-monitor-20250319-173730">
+        <img src="thumbs/wall-skull-gamer-red-monitor-20250319-173730.webp" alt="wall-skull-gamer-red-monitor-20250319-173730" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wall-skull-gamer-red-monitor-20250319-173730</span>
+      </button>
+      <button class="card" data-full="../wheat.jpg" data-name="wheat.jpg" type="button" aria-label="Open wheat">
+        <img src="thumbs/wheat.webp" alt="wheat" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wheat</span>
+      </button>
+      <button class="card" data-full="../wings.jpg" data-name="wings.jpg" type="button" aria-label="Open wings">
+        <img src="thumbs/wings.webp" alt="wings" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">wings</span>
+      </button>
+      <button class="card" data-full="../witch.jpg" data-name="witch.jpg" type="button" aria-label="Open witch">
+        <img src="thumbs/witch.webp" alt="witch" loading="lazy" decoding="async" width="960" height="540">
+        <span class="label">witch</span>
+      </button>
+      </div>
+    </section>
+</main>
+<footer>Originals are 1920×1080 or larger and live in the repository root. Press Esc to close the full-size view.</footer>
+<dialog id="light">
+  <img id="light-img" alt="">
+  <div class="light-bar">
+    <span class="name" id="light-name"></span>
+    <a id="light-open" href="#" target="_blank" rel="noopener">Open original</a>
+    <button id="light-close" type="button">Close</button>
+  </div>
+</dialog>
+<script>
+  const q = document.getElementById('search');
+  q.addEventListener('input', () => {
+    const term = q.value.trim().toLowerCase();
+    document.querySelectorAll('.card').forEach(card => {
+      card.classList.toggle('hidden', !!term && !card.dataset.name.includes(term));
+    });
+    document.querySelectorAll('section').forEach(sec => {
+      sec.classList.toggle('hidden', !sec.querySelector('.card:not(.hidden)'));
+    });
+  });
+
+  const light = document.getElementById('light');
+  const lightImg = document.getElementById('light-img');
+  const lightName = document.getElementById('light-name');
+  const lightOpen = document.getElementById('light-open');
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      const full = card.dataset.full;
+      lightImg.src = full;
+      lightImg.alt = card.querySelector('img').alt;
+      lightName.textContent = card.querySelector('img').alt;
+      lightOpen.href = full;
+      light.showModal();
+    });
+  });
+  document.getElementById('light-close').addEventListener('click', () => light.close());
+  light.addEventListener('click', e => { if (e.target === light) light.close(); });
+</script>
+</body>
+</html>
