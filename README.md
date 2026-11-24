@@ -1,6 +1,8 @@
 # Wallpaper Vault
 
-417 desktop wallpapers, all 1920×1080 or larger, with descriptive kebab-case filenames. Click a sheet to open that section of the [full gallery](gallery/index.html).
+417 desktop wallpapers, all 1920×1080 or larger, with descriptive kebab-case filenames.
+
+**Showcase:** https://sakibshahariar.github.io/wallpaper-vault/gallery/ ([source](gallery/index.html)) — click a sheet below to jump to that section.
 
 ## Anime & Characters (93)
 
